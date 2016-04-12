@@ -9,4 +9,8 @@
         ventSocioNuevo.Show()
 
     End Sub
+
+    Private Sub ModificarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModificarToolStripMenuItem.Click
+
+    End Sub
 End Class
