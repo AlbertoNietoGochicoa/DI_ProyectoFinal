@@ -27,16 +27,16 @@ Partial Class añadirSocioForm
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TextBoxDni = New System.Windows.Forms.TextBox()
+        Me.TextBoxNombre = New System.Windows.Forms.TextBox()
+        Me.TextBoxIban = New System.Windows.Forms.TextBox()
+        Me.TextBoxMail = New System.Windows.Forms.TextBox()
+        Me.TextBoxObservaciones = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.TextBoxImagen = New System.Windows.Forms.TextBox()
+        Me.ButtonSeleccionar = New System.Windows.Forms.Button()
+        Me.ButtonGuardar = New System.Windows.Forms.Button()
+        Me.ButtonVolver = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -84,41 +84,41 @@ Partial Class añadirSocioForm
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Observaciones:"
         '
-        'TextBox1
+        'TextBoxDni
         '
-        Me.TextBox1.Location = New System.Drawing.Point(128, 22)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(222, 20)
-        Me.TextBox1.TabIndex = 5
+        Me.TextBoxDni.Location = New System.Drawing.Point(128, 22)
+        Me.TextBoxDni.Name = "TextBoxDni"
+        Me.TextBoxDni.Size = New System.Drawing.Size(222, 20)
+        Me.TextBoxDni.TabIndex = 5
         '
-        'TextBox2
+        'TextBoxNombre
         '
-        Me.TextBox2.Location = New System.Drawing.Point(128, 65)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(222, 20)
-        Me.TextBox2.TabIndex = 6
+        Me.TextBoxNombre.Location = New System.Drawing.Point(128, 65)
+        Me.TextBoxNombre.Name = "TextBoxNombre"
+        Me.TextBoxNombre.Size = New System.Drawing.Size(222, 20)
+        Me.TextBoxNombre.TabIndex = 6
         '
-        'TextBox3
+        'TextBoxIban
         '
-        Me.TextBox3.Location = New System.Drawing.Point(128, 103)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(222, 20)
-        Me.TextBox3.TabIndex = 7
+        Me.TextBoxIban.Location = New System.Drawing.Point(128, 103)
+        Me.TextBoxIban.Name = "TextBoxIban"
+        Me.TextBoxIban.Size = New System.Drawing.Size(222, 20)
+        Me.TextBoxIban.TabIndex = 7
         '
-        'TextBox4
+        'TextBoxMail
         '
-        Me.TextBox4.Location = New System.Drawing.Point(128, 140)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(222, 20)
-        Me.TextBox4.TabIndex = 8
+        Me.TextBoxMail.Location = New System.Drawing.Point(128, 140)
+        Me.TextBoxMail.Name = "TextBoxMail"
+        Me.TextBoxMail.Size = New System.Drawing.Size(222, 20)
+        Me.TextBoxMail.TabIndex = 8
         '
-        'TextBox5
+        'TextBoxObservaciones
         '
-        Me.TextBox5.Location = New System.Drawing.Point(128, 177)
-        Me.TextBox5.Multiline = True
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(222, 154)
-        Me.TextBox5.TabIndex = 9
+        Me.TextBoxObservaciones.Location = New System.Drawing.Point(128, 177)
+        Me.TextBoxObservaciones.Multiline = True
+        Me.TextBoxObservaciones.Name = "TextBoxObservaciones"
+        Me.TextBoxObservaciones.Size = New System.Drawing.Size(222, 154)
+        Me.TextBoxObservaciones.TabIndex = 9
         '
         'Label6
         '
@@ -129,55 +129,55 @@ Partial Class añadirSocioForm
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "Imagen:"
         '
-        'TextBox6
+        'TextBoxImagen
         '
-        Me.TextBox6.Location = New System.Drawing.Point(505, 140)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(191, 20)
-        Me.TextBox6.TabIndex = 11
+        Me.TextBoxImagen.Location = New System.Drawing.Point(505, 140)
+        Me.TextBoxImagen.Name = "TextBoxImagen"
+        Me.TextBoxImagen.Size = New System.Drawing.Size(191, 20)
+        Me.TextBoxImagen.TabIndex = 11
         '
-        'Button1
+        'ButtonSeleccionar
         '
-        Me.Button1.Location = New System.Drawing.Point(573, 195)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 12
-        Me.Button1.Text = "Seleccionar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.ButtonSeleccionar.Location = New System.Drawing.Point(573, 195)
+        Me.ButtonSeleccionar.Name = "ButtonSeleccionar"
+        Me.ButtonSeleccionar.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonSeleccionar.TabIndex = 12
+        Me.ButtonSeleccionar.Text = "Seleccionar"
+        Me.ButtonSeleccionar.UseVisualStyleBackColor = True
         '
-        'Button2
+        'ButtonGuardar
         '
-        Me.Button2.Location = New System.Drawing.Point(289, 394)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 13
-        Me.Button2.Text = "Guardar"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.ButtonGuardar.Location = New System.Drawing.Point(289, 394)
+        Me.ButtonGuardar.Name = "ButtonGuardar"
+        Me.ButtonGuardar.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonGuardar.TabIndex = 13
+        Me.ButtonGuardar.Text = "Guardar"
+        Me.ButtonGuardar.UseVisualStyleBackColor = True
         '
-        'Button3
+        'ButtonVolver
         '
-        Me.Button3.Location = New System.Drawing.Point(478, 394)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 14
-        Me.Button3.Text = "Volver"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.ButtonVolver.Location = New System.Drawing.Point(478, 394)
+        Me.ButtonVolver.Name = "ButtonVolver"
+        Me.ButtonVolver.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonVolver.TabIndex = 14
+        Me.ButtonVolver.Text = "Volver"
+        Me.ButtonVolver.UseVisualStyleBackColor = True
         '
         'añadirSocioForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(794, 443)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox6)
+        Me.Controls.Add(Me.ButtonVolver)
+        Me.Controls.Add(Me.ButtonGuardar)
+        Me.Controls.Add(Me.ButtonSeleccionar)
+        Me.Controls.Add(Me.TextBoxImagen)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.TextBoxObservaciones)
+        Me.Controls.Add(Me.TextBoxMail)
+        Me.Controls.Add(Me.TextBoxIban)
+        Me.Controls.Add(Me.TextBoxNombre)
+        Me.Controls.Add(Me.TextBoxDni)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -195,14 +195,14 @@ Partial Class añadirSocioForm
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents TextBoxDni As TextBox
+    Friend WithEvents TextBoxNombre As TextBox
+    Friend WithEvents TextBoxIban As TextBox
+    Friend WithEvents TextBoxMail As TextBox
+    Friend WithEvents TextBoxObservaciones As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents TextBoxImagen As TextBox
+    Friend WithEvents ButtonSeleccionar As Button
+    Friend WithEvents ButtonGuardar As Button
+    Friend WithEvents ButtonVolver As Button
 End Class

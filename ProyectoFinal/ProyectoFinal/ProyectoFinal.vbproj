@@ -72,10 +72,22 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddPedidoForm.Designer.vb">
+      <DependentUpon>AddPedidoForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddPedidoForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="añadirSocioForm.Designer.vb">
       <DependentUpon>añadirSocioForm.vb</DependentUpon>
     </Compile>
     <Compile Include="añadirSocioForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarSocioForm.Designer.vb">
+      <DependentUpon>EliminarSocioForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarSocioForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.vb">
@@ -108,8 +120,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AddPedidoForm.resx">
+      <DependentUpon>AddPedidoForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="añadirSocioForm.resx">
       <DependentUpon>añadirSocioForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarSocioForm.resx">
+      <DependentUpon>EliminarSocioForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>

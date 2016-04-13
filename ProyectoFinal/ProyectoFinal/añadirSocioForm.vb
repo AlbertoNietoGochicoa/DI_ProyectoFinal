@@ -4,7 +4,7 @@
 
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles ButtonVolver.Click
         'Cerramos la ventana de nuevo socio
         Me.Dispose()
     End Sub
