@@ -1,11 +1,11 @@
 # Procedimento para añadir un producto
 
 CREATE PROCEDURE ADDPRODUCTO
-	@nom_prod varchar(50),
-	@descripcion varchar(100),
-	@precio		float,
-	@stock		int,
-	@stock_minimo	int
+	@nom_prod 	 	varchar(50),
+	@descripcion 	varchar(100),
+	@precio		 	float,
+	@stock		 	int,
+	@stock_minimo 	int
 AS
 BEGIN
 	DECLARE @existe int
@@ -19,6 +19,5 @@ BEGIN
 	else
 	BEGIN
 		INSERT INTO PRODUCTO (nom_prod,descripcion,precio,stock,stock_minimo) values (@nom_prod,@descripcion,@precio,@stock,@stock_minimo)
-	
 	END
 END
