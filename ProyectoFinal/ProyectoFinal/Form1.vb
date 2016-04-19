@@ -27,4 +27,27 @@
         Dim ventAddPedido As New AddPedidoForm
         ventAddPedido.Show()
     End Sub
+
+    Private Sub ModificarToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ModificarToolStripMenuItem1.Click
+        'Al pulsar el boton se muestra la ventana de modificar pedido
+        Dim ventModPedido As New ModPedidoForm
+        ventModPedido.Show()
+
+    End Sub
+
+    Private Sub ListaDePedidosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListaDePedidosToolStripMenuItem.Click
+        'Al pulsar el boton se muestra la ventana de la lista de pedidos
+        Dim ventListaPedido As New ListaPedidoForm
+        ventListaPedido.Show()
+    End Sub
+
+    Private Sub NuevoProductoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevoProductoToolStripMenuItem.Click
+        'Al pulsar el boton se muestra la ventana de Añadir nuevo producto
+        Dim ventListaPedido As New ListaPedidoForm
+        ventListaPedido.Show()
+    End Sub
+
+    Private Sub ModificarProductoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModificarProductoToolStripMenuItem.Click
+
+    End Sub
 End Class
