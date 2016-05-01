@@ -76,10 +76,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddPedidoForm.Designer.vb">
-      <DependentUpon>AddPedidoForm.vb</DependentUpon>
+    <Compile Include="AddCompraForm.Designer.vb">
+      <DependentUpon>AddCompraForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="AddPedidoForm.vb">
+    <Compile Include="AddCompraForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="añadirSocioForm.Designer.vb">
@@ -88,10 +88,22 @@
     <Compile Include="añadirSocioForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CrearReporteForm.Designer.vb">
+      <DependentUpon>CrearReporteForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CrearReporteForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="EliminarSocioForm.Designer.vb">
       <DependentUpon>EliminarSocioForm.vb</DependentUpon>
     </Compile>
     <Compile Include="EliminarSocioForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElimProductoForm.Designer.vb">
+      <DependentUpon>ElimProductoForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElimProductoForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.vb">
@@ -119,6 +131,12 @@
     <Compile Include="ModPedidoForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ModProductForm.Designer.vb">
+      <DependentUpon>ModProductForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ModProductForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -142,14 +160,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AddPedidoForm.resx">
-      <DependentUpon>AddPedidoForm.vb</DependentUpon>
+    <EmbeddedResource Include="AddCompraForm.resx">
+      <DependentUpon>AddCompraForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="añadirSocioForm.resx">
       <DependentUpon>añadirSocioForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrearReporteForm.resx">
+      <DependentUpon>CrearReporteForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EliminarSocioForm.resx">
       <DependentUpon>EliminarSocioForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElimProductoForm.resx">
+      <DependentUpon>ElimProductoForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
@@ -162,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModPedidoForm.resx">
       <DependentUpon>ModPedidoForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModProductForm.resx">
+      <DependentUpon>ModProductForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

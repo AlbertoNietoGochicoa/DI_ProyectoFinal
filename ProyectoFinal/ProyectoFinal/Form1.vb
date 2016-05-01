@@ -24,7 +24,7 @@
 
     Private Sub AñadirToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles AñadirToolStripMenuItem1.Click
         'Al pulsar el boton se muestra la ventana de Añadir pedido
-        Dim ventAddPedido As New AddPedidoForm
+        Dim ventAddPedido As New AddCompraForm
         ventAddPedido.Show()
     End Sub
 
@@ -48,6 +48,20 @@
     End Sub
 
     Private Sub ModificarProductoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModificarProductoToolStripMenuItem.Click
+        'Al pulsar el boton se muestra la ventana de mnodificar un producto
+        Dim ventModProduct As New ModProductForm
+        ventModProduct.Show()
+    End Sub
 
+    Private Sub EliminarProductoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EliminarProductoToolStripMenuItem.Click
+        'Al pulsar el boton se muestra la ventana de eliminar un producto
+        Dim ventElimProducto As New ElimProductoForm
+        ventElimProducto.Show()
+    End Sub
+
+    Private Sub CrearReporteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CrearReporteToolStripMenuItem.Click
+        'Al pulsar el boton se muestra la ventana de eliminar crear reporte
+        Dim ventCrearReporte As New CrearReporteForm
+        ventCrearReporte.Show()
     End Sub
 End Class
