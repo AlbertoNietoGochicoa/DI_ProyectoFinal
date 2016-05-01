@@ -216,7 +216,7 @@ Partial Class ElimProductoForm
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "ElimProductoForm"
-        Me.Text = "ElimProductoForm"
+        Me.Text = "Eliminar producto"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

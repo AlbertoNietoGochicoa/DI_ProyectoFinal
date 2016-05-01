@@ -60,8 +60,20 @@
     End Sub
 
     Private Sub CrearReporteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CrearReporteToolStripMenuItem.Click
-        'Al pulsar el boton se muestra la ventana de eliminar crear reporte
+        'Al pulsar el boton se muestra la ventana de crear reporte
         Dim ventCrearReporte As New CrearReporteForm
         ventCrearReporte.Show()
+    End Sub
+
+    Private Sub ConsultarReportesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarReportesToolStripMenuItem.Click
+        'Al pulsar el boton se muestra la ventana de consultar reporte
+        Dim ventConsultarReport As New ConsultarReportForm
+        ventConsultarReport.Show()
+    End Sub
+
+    Private Sub AcercaDeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AcercaDeToolStripMenuItem.Click
+        'Al pulsar el boton se muestra la ventana de Acerca de...
+        Dim ventAcercaDe As New AcercaDeForm
+        ventAcercaDe.Show()
     End Sub
 End Class

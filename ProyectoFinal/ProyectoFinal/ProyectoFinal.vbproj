@@ -76,6 +76,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcercaDeForm.Designer.vb">
+      <DependentUpon>AcercaDeForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AcercaDeForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AddCompraForm.Designer.vb">
       <DependentUpon>AddCompraForm.vb</DependentUpon>
     </Compile>
@@ -86,6 +92,12 @@
       <DependentUpon>añadirSocioForm.vb</DependentUpon>
     </Compile>
     <Compile Include="añadirSocioForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarReportForm.Designer.vb">
+      <DependentUpon>ConsultarReportForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarReportForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CrearReporteForm.Designer.vb">
@@ -160,11 +172,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AcercaDeForm.resx">
+      <DependentUpon>AcercaDeForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddCompraForm.resx">
       <DependentUpon>AddCompraForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="añadirSocioForm.resx">
       <DependentUpon>añadirSocioForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarReportForm.resx">
+      <DependentUpon>ConsultarReportForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CrearReporteForm.resx">
       <DependentUpon>CrearReporteForm.vb</DependentUpon>

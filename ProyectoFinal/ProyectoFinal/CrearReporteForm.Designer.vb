@@ -93,7 +93,7 @@ Partial Class CrearReporteForm
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.GuardarReporBut)
         Me.Name = "CrearReporteForm"
-        Me.Text = "CrearReporteForm"
+        Me.Text = "Crear reportes"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

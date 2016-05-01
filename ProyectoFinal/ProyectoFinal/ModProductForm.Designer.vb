@@ -216,7 +216,7 @@ Partial Class ModProductForm
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "ModProductForm"
-        Me.Text = "ModProductForm"
+        Me.Text = "Modificar producto"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
