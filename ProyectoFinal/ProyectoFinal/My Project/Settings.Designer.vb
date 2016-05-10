@@ -57,9 +57,8 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Program Files\Microsoft S"& _ 
-            "QL Server\MSSQL11.SQLEXPRESS\MSSQL\DATA\sociedadGastronomica.mdf"";Integrated Sec"& _ 
-            "urity=True;Connect Timeout=30")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=ALBERTONIETCC55\SQLEXPRESS;Initial Catalog=sociedadGastronomica;Integ"& _ 
+            "rated Security=True")>  _
         Public ReadOnly Property conexion() As String
             Get
                 Return CType(Me("conexion"),String)
