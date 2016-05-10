@@ -8,8 +8,8 @@ BEGIN
 	FROM PRODUCTO
 	WHERE cod_prod = (select inserted.cod_prod
 					  from inserted)
-	if (@stock <= (select stock_min from inserted))
+	if (@stock <= (select stock_minimo from inserted))
 	BEGIN
-		raiserror ("Producto bajo de stock",16,1)
+		raiserror ('Producto bajo de stock',16,1)
 	END
 END
