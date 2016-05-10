@@ -131,6 +131,7 @@
     <Compile Include="ListaPedidoForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ManejadorBD.vb" />
     <Compile Include="ModificarSocioForm.Designer.vb">
       <DependentUpon>ModificarSocioForm.vb</DependentUpon>
     </Compile>
