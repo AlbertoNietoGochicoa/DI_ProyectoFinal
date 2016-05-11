@@ -10,6 +10,11 @@
     End Sub
 
     Private Sub ButtonGuardar_Click(sender As Object, e As EventArgs) Handles ButtonGuardar.Click
+        Dim mbd = New ManejadorBD
+
+
+        mbd.anadirSocio()
+
 
     End Sub
 End Class
