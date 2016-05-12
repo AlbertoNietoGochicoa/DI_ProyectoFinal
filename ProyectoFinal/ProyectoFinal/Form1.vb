@@ -43,7 +43,7 @@
 
     Private Sub NuevoProductoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevoProductoToolStripMenuItem.Click
         'Al pulsar el boton se muestra la ventana de Añadir nuevo producto
-        Dim ventListaPedido As New ListaPedidoForm
+        Dim ventListaPedido As New NewProductForm
         ventListaPedido.Show()
     End Sub
 

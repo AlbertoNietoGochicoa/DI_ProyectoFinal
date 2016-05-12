@@ -24,11 +24,11 @@ Partial Class NewProductForm
     Private Sub InitializeComponent()
         Me.ButtonVolver = New System.Windows.Forms.Button()
         Me.ButtonGuardar = New System.Windows.Forms.Button()
-        Me.TextBoxObservaciones = New System.Windows.Forms.TextBox()
-        Me.TextBoxMail = New System.Windows.Forms.TextBox()
-        Me.TextBoxIban = New System.Windows.Forms.TextBox()
-        Me.TextBoxNombre = New System.Windows.Forms.TextBox()
-        Me.TextBoxDni = New System.Windows.Forms.TextBox()
+        Me.TextBoxDescrip = New System.Windows.Forms.TextBox()
+        Me.TextBoxStockMin = New System.Windows.Forms.TextBox()
+        Me.TextBoxStock = New System.Windows.Forms.TextBox()
+        Me.TextBoxPrecio = New System.Windows.Forms.TextBox()
+        Me.TextBoxNombProd = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -54,41 +54,41 @@ Partial Class NewProductForm
         Me.ButtonGuardar.Text = "Guardar"
         Me.ButtonGuardar.UseVisualStyleBackColor = True
         '
-        'TextBoxObservaciones
+        'TextBoxDescrip
         '
-        Me.TextBoxObservaciones.Location = New System.Drawing.Point(173, 199)
-        Me.TextBoxObservaciones.Multiline = True
-        Me.TextBoxObservaciones.Name = "TextBoxObservaciones"
-        Me.TextBoxObservaciones.Size = New System.Drawing.Size(222, 154)
-        Me.TextBoxObservaciones.TabIndex = 24
+        Me.TextBoxDescrip.Location = New System.Drawing.Point(173, 199)
+        Me.TextBoxDescrip.Multiline = True
+        Me.TextBoxDescrip.Name = "TextBoxDescrip"
+        Me.TextBoxDescrip.Size = New System.Drawing.Size(222, 154)
+        Me.TextBoxDescrip.TabIndex = 24
         '
-        'TextBoxMail
+        'TextBoxStockMin
         '
-        Me.TextBoxMail.Location = New System.Drawing.Point(173, 162)
-        Me.TextBoxMail.Name = "TextBoxMail"
-        Me.TextBoxMail.Size = New System.Drawing.Size(222, 20)
-        Me.TextBoxMail.TabIndex = 23
+        Me.TextBoxStockMin.Location = New System.Drawing.Point(173, 162)
+        Me.TextBoxStockMin.Name = "TextBoxStockMin"
+        Me.TextBoxStockMin.Size = New System.Drawing.Size(222, 20)
+        Me.TextBoxStockMin.TabIndex = 23
         '
-        'TextBoxIban
+        'TextBoxStock
         '
-        Me.TextBoxIban.Location = New System.Drawing.Point(173, 125)
-        Me.TextBoxIban.Name = "TextBoxIban"
-        Me.TextBoxIban.Size = New System.Drawing.Size(222, 20)
-        Me.TextBoxIban.TabIndex = 22
+        Me.TextBoxStock.Location = New System.Drawing.Point(173, 125)
+        Me.TextBoxStock.Name = "TextBoxStock"
+        Me.TextBoxStock.Size = New System.Drawing.Size(222, 20)
+        Me.TextBoxStock.TabIndex = 22
         '
-        'TextBoxNombre
+        'TextBoxPrecio
         '
-        Me.TextBoxNombre.Location = New System.Drawing.Point(173, 87)
-        Me.TextBoxNombre.Name = "TextBoxNombre"
-        Me.TextBoxNombre.Size = New System.Drawing.Size(222, 20)
-        Me.TextBoxNombre.TabIndex = 21
+        Me.TextBoxPrecio.Location = New System.Drawing.Point(173, 87)
+        Me.TextBoxPrecio.Name = "TextBoxPrecio"
+        Me.TextBoxPrecio.Size = New System.Drawing.Size(222, 20)
+        Me.TextBoxPrecio.TabIndex = 21
         '
-        'TextBoxDni
+        'TextBoxNombProd
         '
-        Me.TextBoxDni.Location = New System.Drawing.Point(173, 44)
-        Me.TextBoxDni.Name = "TextBoxDni"
-        Me.TextBoxDni.Size = New System.Drawing.Size(222, 20)
-        Me.TextBoxDni.TabIndex = 20
+        Me.TextBoxNombProd.Location = New System.Drawing.Point(173, 44)
+        Me.TextBoxNombProd.Name = "TextBoxNombProd"
+        Me.TextBoxNombProd.Size = New System.Drawing.Size(222, 20)
+        Me.TextBoxNombProd.TabIndex = 20
         '
         'Label5
         '
@@ -131,9 +131,9 @@ Partial Class NewProductForm
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(37, 47)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(105, 13)
+        Me.Label1.Size = New System.Drawing.Size(109, 13)
         Me.Label1.TabIndex = 15
-        Me.Label1.Text = "Codigo del producto:"
+        Me.Label1.Text = "Nombre del producto:"
         '
         'NewProductForm
         '
@@ -142,11 +142,11 @@ Partial Class NewProductForm
         Me.ClientSize = New System.Drawing.Size(491, 488)
         Me.Controls.Add(Me.ButtonVolver)
         Me.Controls.Add(Me.ButtonGuardar)
-        Me.Controls.Add(Me.TextBoxObservaciones)
-        Me.Controls.Add(Me.TextBoxMail)
-        Me.Controls.Add(Me.TextBoxIban)
-        Me.Controls.Add(Me.TextBoxNombre)
-        Me.Controls.Add(Me.TextBoxDni)
+        Me.Controls.Add(Me.TextBoxDescrip)
+        Me.Controls.Add(Me.TextBoxStockMin)
+        Me.Controls.Add(Me.TextBoxStock)
+        Me.Controls.Add(Me.TextBoxPrecio)
+        Me.Controls.Add(Me.TextBoxNombProd)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -161,11 +161,11 @@ Partial Class NewProductForm
 
     Friend WithEvents ButtonVolver As Button
     Friend WithEvents ButtonGuardar As Button
-    Friend WithEvents TextBoxObservaciones As TextBox
-    Friend WithEvents TextBoxMail As TextBox
-    Friend WithEvents TextBoxIban As TextBox
-    Friend WithEvents TextBoxNombre As TextBox
-    Friend WithEvents TextBoxDni As TextBox
+    Friend WithEvents TextBoxDescrip As TextBox
+    Friend WithEvents TextBoxStockMin As TextBox
+    Friend WithEvents TextBoxStock As TextBox
+    Friend WithEvents TextBoxPrecio As TextBox
+    Friend WithEvents TextBoxNombProd As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
