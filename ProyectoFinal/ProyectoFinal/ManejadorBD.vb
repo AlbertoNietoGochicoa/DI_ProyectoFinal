@@ -122,21 +122,19 @@ Public Class ManejadorBD
         command.CommandType = CommandType.StoredProcedure
 
         command.Parameters.AddWithValue("@nom_prod", v1)
-        command.Parameters.AddWithValue("@descripcion", v2)
-        command.Parameters.AddWithValue("@precio", v3)
-        command.Parameters.AddWithValue("@stock", v4)
-        command.Parameters.AddWithValue("@stock_minimo", v5)
+        command.Parameters.AddWithValue("@precio", v2)
+        command.Parameters.AddWithValue("@stock", v3)
+        command.Parameters.AddWithValue("@stock_minimo", v4)
+        command.Parameters.AddWithValue("@descripcion", v5)
 
-        Try
-            con.Open()
+
+        con.Open()
             command.ExecuteNonQuery()
             con.Close()
 
-        Catch ex As Exception
-            MsgBox("Error")
-        End Try
 
-        Beep()
+
+            Beep()
         MsgBox("hecho")
 
     End Sub
