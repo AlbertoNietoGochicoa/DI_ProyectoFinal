@@ -37,6 +37,8 @@ Partial Class añadirSocioForm
         Me.ButtonSeleccionar = New System.Windows.Forms.Button()
         Me.ButtonGuardar = New System.Windows.Forms.Button()
         Me.ButtonVolver = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -138,7 +140,7 @@ Partial Class añadirSocioForm
         '
         'ButtonSeleccionar
         '
-        Me.ButtonSeleccionar.Location = New System.Drawing.Point(573, 195)
+        Me.ButtonSeleccionar.Location = New System.Drawing.Point(556, 195)
         Me.ButtonSeleccionar.Name = "ButtonSeleccionar"
         Me.ButtonSeleccionar.Size = New System.Drawing.Size(75, 23)
         Me.ButtonSeleccionar.TabIndex = 12
@@ -163,11 +165,20 @@ Partial Class añadirSocioForm
         Me.ButtonVolver.Text = "Volver"
         Me.ButtonVolver.UseVisualStyleBackColor = True
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Location = New System.Drawing.Point(535, 22)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(113, 90)
+        Me.PictureBox1.TabIndex = 15
+        Me.PictureBox1.TabStop = False
+        '
         'añadirSocioForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(794, 443)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.ButtonVolver)
         Me.Controls.Add(Me.ButtonGuardar)
         Me.Controls.Add(Me.ButtonSeleccionar)
@@ -185,6 +196,7 @@ Partial Class añadirSocioForm
         Me.Controls.Add(Me.Label1)
         Me.Name = "añadirSocioForm"
         Me.Text = "Añadir Socio"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -205,4 +217,5 @@ Partial Class añadirSocioForm
     Friend WithEvents ButtonSeleccionar As Button
     Friend WithEvents ButtonGuardar As Button
     Friend WithEvents ButtonVolver As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

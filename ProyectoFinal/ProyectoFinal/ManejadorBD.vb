@@ -116,6 +116,17 @@ Public Class ManejadorBD
     End Sub
     Public Sub anadirProducto(v1, v2, v3, v4, v5)
 
+        Try
+            v2 = CType(v2, Int64)
+            v2 = CType(v3, Int64)
+            v2 = CType(v4, Int64)
+
+
+        Catch ex As Exception
+            Beep()
+        End Try
+
+
 
 
         Dim command As New SqlCommand("ADDPRODUCTO", con)
