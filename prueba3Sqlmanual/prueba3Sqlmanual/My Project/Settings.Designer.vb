@@ -57,11 +57,11 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=ALBERTONIETCC55\SQLEXPRESS;Initial Catalog=inventario;Integrated Secu"& _ 
-            "rity=True")>  _
-        Public ReadOnly Property inventarioConnectionString() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=ALBERTONIETCC55\SQLEXPRESS;Initial Catalog=alberto;Integrated Securit"& _ 
+            "y=True")>  _
+        Public ReadOnly Property conexion1() As String
             Get
-                Return CType(Me("inventarioConnectionString"),String)
+                Return CType(Me("conexion1"),String)
             End Get
         End Property
     End Class

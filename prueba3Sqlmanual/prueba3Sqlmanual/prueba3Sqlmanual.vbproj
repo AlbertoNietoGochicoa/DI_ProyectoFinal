@@ -72,6 +72,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="albertoDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>albertoDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +87,9 @@
     <Compile Include="inventarioDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>inventarioDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="inventarioDataSet.vb">
       <DependentUpon>inventarioDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -112,6 +120,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="albertoDataSet.xsc">
+      <DependentUpon>albertoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="albertoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>albertoDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="albertoDataSet.xss">
+      <DependentUpon>albertoDataSet.xsd</DependentUpon>
+    </None>
     <None Include="inventarioDataSet.xsc">
       <DependentUpon>inventarioDataSet.xsd</DependentUpon>
     </None>

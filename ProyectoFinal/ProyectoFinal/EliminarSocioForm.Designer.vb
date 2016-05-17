@@ -22,11 +22,6 @@ Partial Class EliminarSocioForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.TextBoxBuscar = New System.Windows.Forms.TextBox()
-        Me.ButtonBuscar = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TextBoxObservaciones = New System.Windows.Forms.TextBox()
@@ -41,49 +36,11 @@ Partial Class EliminarSocioForm
         Me.Label9 = New System.Windows.Forms.Label()
         Me.ButtonVolver = New System.Windows.Forms.Button()
         Me.ButtonEliminar = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(216, 63)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(143, 21)
-        Me.ComboBox1.TabIndex = 9
-        '
-        'TextBoxBuscar
-        '
-        Me.TextBoxBuscar.Location = New System.Drawing.Point(216, 27)
-        Me.TextBoxBuscar.Name = "TextBoxBuscar"
-        Me.TextBoxBuscar.Size = New System.Drawing.Size(143, 20)
-        Me.TextBoxBuscar.TabIndex = 8
-        '
-        'ButtonBuscar
-        '
-        Me.ButtonBuscar.Location = New System.Drawing.Point(401, 42)
-        Me.ButtonBuscar.Name = "ButtonBuscar"
-        Me.ButtonBuscar.Size = New System.Drawing.Size(75, 23)
-        Me.ButtonBuscar.TabIndex = 7
-        Me.ButtonBuscar.Text = "Buscar"
-        Me.ButtonBuscar.UseVisualStyleBackColor = True
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(120, 66)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(72, 13)
-        Me.Label2.TabIndex = 6
-        Me.Label2.Text = "En el campo: "
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(146, 30)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(46, 13)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "Buscar: "
         '
         'Label3
         '
@@ -204,11 +161,51 @@ Partial Class EliminarSocioForm
         Me.ButtonEliminar.Text = "Eliminar"
         Me.ButtonEliminar.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(239, 36)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 58)
+        Me.Button1.TabIndex = 37
+        Me.Button1.Text = "<"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(348, 36)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 58)
+        Me.Button2.TabIndex = 38
+        Me.Button2.Text = ">"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(479, 36)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 58)
+        Me.Button3.TabIndex = 39
+        Me.Button3.Text = ">>"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(123, 36)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 58)
+        Me.Button4.TabIndex = 40
+        Me.Button4.Text = "<<"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
         'EliminarSocioForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(705, 408)
+        Me.ClientSize = New System.Drawing.Size(705, 550)
+        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ButtonVolver)
         Me.Controls.Add(Me.ButtonEliminar)
         Me.Controls.Add(Me.TextBoxObservaciones)
@@ -223,23 +220,12 @@ Partial Class EliminarSocioForm
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.TextBoxBuscar)
-        Me.Controls.Add(Me.ButtonBuscar)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
         Me.Name = "EliminarSocioForm"
         Me.Text = "Eliminar Socio"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents TextBoxBuscar As TextBox
-    Friend WithEvents ButtonBuscar As Button
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents TextBoxObservaciones As TextBox
@@ -254,4 +240,8 @@ Partial Class EliminarSocioForm
     Friend WithEvents Label9 As Label
     Friend WithEvents ButtonVolver As Button
     Friend WithEvents ButtonEliminar As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
 End Class
