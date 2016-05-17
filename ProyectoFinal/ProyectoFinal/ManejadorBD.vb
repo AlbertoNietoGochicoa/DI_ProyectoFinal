@@ -6,7 +6,9 @@ Public Class ManejadorBD
 
     'Hacemos la conexion
 
-    Dim con As SqlConnection = New SqlConnection(My.Settings.conexion)
+    ' Conexión Alberto Dim con As SqlConnection = New SqlConnection(My.Settings.conexion)
+    ' Conexión Lander
+    Dim conexionLander As SqlConnection = New SqlConnection(My.Settings.conLander)
     ' Objetos
     Dim da As SqlDataAdapter
     Dim dsLinea As DataSet
@@ -20,7 +22,7 @@ Public Class ManejadorBD
         ' String para la consulta
         Dim sql As String = "Select * From SOCIO"
         ' Nos quedamos en comando con el string del SQL y la conexión
-        Dim comando As New SqlCommand(sql, con)
+        Dim comando As New SqlCommand(sql, conexionLander)
 
 
         Try
@@ -47,7 +49,7 @@ Public Class ManejadorBD
         ' String para la consulta
         Dim sql As String = "Select * From PRODUCTO"
         ' Nos quedamos en comando con el string del SQL y la conexión
-        Dim comando As New SqlCommand(sql, con)
+        Dim comando As New SqlCommand(sql, conexionLander)
 
 
         Try
@@ -71,7 +73,7 @@ Public Class ManejadorBD
         ' String para la consulta
         Dim sql As String = "Select * From LINEA_PEDIDO"
         ' Nos quedamos en comando con el string del SQL y la conexión
-        Dim comando As New SqlCommand(sql, con)
+        Dim comando As New SqlCommand(sql, conexionLander)
 
 
         Try
@@ -91,45 +93,50 @@ Public Class ManejadorBD
 
     End Sub
 
-    Public Sub anadirSocio()
+    Public Sub anadirSocio(ByRef dni, ByRef nombre, ByRef email, ByRef iban, ByRef foto, ByRef observaciones)
 
         Dim ventanaAnadiSocio As New añadirSocioForm
 
-        Dim command As New SqlCommand("ANADIRSOCIO", con)
+        Dim command As New SqlCommand("ANADIRSOCIO", conexionLander)
         command.CommandType = CommandType.StoredProcedure
 
         command.Parameters.AddWithValue("@dni", ventanaAnadiSocio.TextBoxDni.Text)
         command.Parameters.AddWithValue("@nom_soc", ventanaAnadiSocio.TextBoxNombre.Text)
         command.Parameters.AddWithValue("@email", ventanaAnadiSocio.TextBoxMail.Text)
         command.Parameters.AddWithValue("@iban", ventanaAnadiSocio.TextBoxIban.Text)
-        ' command.Parameters.AddWithValue("@foto", )
+        'command.Parameters.AddWithValue("@foto", )
         command.Parameters.AddWithValue("@observacions", ventanaAnadiSocio.TextBoxObservaciones.Text)
 
+        Try
+            conexionLander.Open()
+        Catch ex As SqlException
+            MsgBox("Imposible conectarse a la BD")
+        End Try
 
-        con.Open()
-        command.ExecuteNonQuery()
-        con.Close()
+        Try
+            command.ExecuteNonQuery()
+
+        Catch ex As SqlException
+            MsgBox("No sue puede agregar al usuario")
+        End Try
+
+
+        conexionLander.Close()
 
         Beep()
         MsgBox("hecho")
 
     End Sub
-    Public Sub anadirProducto(v1, v2, v3, v4, v5)
+    Public Sub anadirProducto(ByRef v1, ByRef v2, ByRef v3, ByRef v4, ByRef v5)
 
-        Try
-            v2 = CType(v2, Int64)
-            v2 = CType(v3, Int64)
-            v2 = CType(v4, Int64)
+        ' Debug
+        'MsgBox(v1)
+        'MsgBox(v2)
+        'MsgBox(v3)
+        'MsgBox(v4)
+        'MsgBox(v5)
 
-
-        Catch ex As Exception
-            Beep()
-        End Try
-
-
-
-
-        Dim command As New SqlCommand("ADDPRODUCTO", con)
+        Dim command As New SqlCommand("ADDPRODUCTO", conexionLander)
         command.CommandType = CommandType.StoredProcedure
 
         command.Parameters.AddWithValue("@nom_prod", v1)
@@ -138,16 +145,22 @@ Public Class ManejadorBD
         command.Parameters.AddWithValue("@stock_minimo", v4)
         command.Parameters.AddWithValue("@descripcion", v5)
 
+        Try
+            conexionLander.Open()
 
-        con.Open()
+        Catch ex As SqlException
+            MsgBox("Imposible conectarse a la BD")
+        End Try
+        Try
             command.ExecuteNonQuery()
-            con.Close()
 
+        Catch ex As SqlException
+            MsgBox("No se puede hacer la inserción del producto")
+        End Try
 
+        conexionLander.Close()
 
-            Beep()
-        MsgBox("hecho")
-
+        MsgBox("Producto añadido correctamente")
     End Sub
 
 End Class
