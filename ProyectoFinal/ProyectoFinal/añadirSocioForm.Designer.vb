@@ -33,7 +33,6 @@ Partial Class añadirSocioForm
         Me.TextBoxMail = New System.Windows.Forms.TextBox()
         Me.TextBoxObservaciones = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBoxImagen = New System.Windows.Forms.TextBox()
         Me.ButtonSeleccionar = New System.Windows.Forms.Button()
         Me.ButtonGuardar = New System.Windows.Forms.Button()
         Me.ButtonVolver = New System.Windows.Forms.Button()
@@ -125,18 +124,11 @@ Partial Class añadirSocioForm
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(444, 143)
+        Me.Label6.Location = New System.Drawing.Point(570, 29)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(45, 13)
+        Me.Label6.Size = New System.Drawing.Size(42, 13)
         Me.Label6.TabIndex = 10
-        Me.Label6.Text = "Imagen:"
-        '
-        'TextBoxImagen
-        '
-        Me.TextBoxImagen.Location = New System.Drawing.Point(505, 140)
-        Me.TextBoxImagen.Name = "TextBoxImagen"
-        Me.TextBoxImagen.Size = New System.Drawing.Size(191, 20)
-        Me.TextBoxImagen.TabIndex = 11
+        Me.Label6.Text = "Imagen"
         '
         'ButtonSeleccionar
         '
@@ -167,7 +159,7 @@ Partial Class añadirSocioForm
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(535, 22)
+        Me.PictureBox1.Location = New System.Drawing.Point(532, 70)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(113, 90)
         Me.PictureBox1.TabIndex = 15
@@ -182,7 +174,6 @@ Partial Class añadirSocioForm
         Me.Controls.Add(Me.ButtonVolver)
         Me.Controls.Add(Me.ButtonGuardar)
         Me.Controls.Add(Me.ButtonSeleccionar)
-        Me.Controls.Add(Me.TextBoxImagen)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.TextBoxObservaciones)
         Me.Controls.Add(Me.TextBoxMail)
@@ -213,7 +204,6 @@ Partial Class añadirSocioForm
     Friend WithEvents TextBoxMail As TextBox
     Friend WithEvents TextBoxObservaciones As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBoxImagen As TextBox
     Friend WithEvents ButtonSeleccionar As Button
     Friend WithEvents ButtonGuardar As Button
     Friend WithEvents ButtonVolver As Button

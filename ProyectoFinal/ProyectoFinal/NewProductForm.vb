@@ -12,7 +12,7 @@
 
         Dim mbd As New ManejadorBD
 
-        mbd.anadirProducto(Me.TextBoxNombProd.Text, Me.TextBoxPrecio, Me.TextBoxStock, Me.TextBoxStockMin, Me.TextBoxDescrip)
+        mbd.anadirProducto(Me.TextBoxNombProd.Text, Me.TextBoxPrecio.Text, Me.TextBoxStock.Text, Me.TextBoxStockMin.Text, Me.TextBoxDescrip.Text)
 
 
     End Sub

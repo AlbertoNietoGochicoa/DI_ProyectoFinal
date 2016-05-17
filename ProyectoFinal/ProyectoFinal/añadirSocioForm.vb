@@ -10,11 +10,19 @@
     End Sub
 
     Private Sub ButtonGuardar_Click(sender As Object, e As EventArgs) Handles ButtonGuardar.Click
+        ' Referencia a la clase
         Dim mbd = New ManejadorBD
+        ' Debug
 
 
-        mbd.anadirSocio()
+        ' mbd.anadirSocio(TextBoxDni.Text, TextBoxNombre.Text, TextBoxMail.Text, TextBoxIban, TextBoxImagen, TextBoxObservaciones)
 
+
+    End Sub
+
+    Private Sub ButtonSeleccionar_Click(sender As Object, e As EventArgs) Handles ButtonSeleccionar.Click
+
+        PictureBox1.Image = Image.FromFile("C:\Users\Public\Pictures\Sample Pictures\Koala.jpg")
 
     End Sub
 End Class
