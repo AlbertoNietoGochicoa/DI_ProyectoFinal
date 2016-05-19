@@ -35,6 +35,12 @@ Partial Class ModProductForm
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.TextBoxNombre = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'TextBoxDescripcion
@@ -68,7 +74,7 @@ Partial Class ModProductForm
         '
         'TextBoxCodProd
         '
-        Me.TextBoxCodProd.Location = New System.Drawing.Point(169, 191)
+        Me.TextBoxCodProd.Location = New System.Drawing.Point(169, 151)
         Me.TextBoxCodProd.Name = "TextBoxCodProd"
         Me.TextBoxCodProd.Size = New System.Drawing.Size(222, 20)
         Me.TextBoxCodProd.TabIndex = 30
@@ -112,7 +118,7 @@ Partial Class ModProductForm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(33, 194)
+        Me.Label1.Location = New System.Drawing.Point(33, 154)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(105, 13)
         Me.Label1.TabIndex = 25
@@ -139,17 +145,75 @@ Partial Class ModProductForm
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(33, 148)
+        Me.Label6.Location = New System.Drawing.Point(33, 103)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(397, 13)
         Me.Label6.TabIndex = 37
         Me.Label6.Text = "_________________________________________________________________"
+        '
+        'TextBoxNombre
+        '
+        Me.TextBoxNombre.Location = New System.Drawing.Point(169, 194)
+        Me.TextBoxNombre.Name = "TextBoxNombre"
+        Me.TextBoxNombre.Size = New System.Drawing.Size(222, 20)
+        Me.TextBoxNombre.TabIndex = 39
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(91, 197)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(47, 13)
+        Me.Label7.TabIndex = 38
+        Me.Label7.Text = "Nombre:"
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(52, 34)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(54, 45)
+        Me.Button3.TabIndex = 40
+        Me.Button3.Text = "<<"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(148, 34)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(54, 45)
+        Me.Button4.TabIndex = 41
+        Me.Button4.Text = "<"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(248, 34)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(54, 45)
+        Me.Button5.TabIndex = 42
+        Me.Button5.Text = ">"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(350, 34)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(54, 45)
+        Me.Button6.TabIndex = 43
+        Me.Button6.Text = ">>"
+        Me.Button6.UseVisualStyleBackColor = True
         '
         'ModProductForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(457, 507)
+        Me.Controls.Add(Me.Button6)
+        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.TextBoxNombre)
+        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -183,4 +247,10 @@ Partial Class ModProductForm
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Label6 As Label
+    Friend WithEvents TextBoxNombre As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button6 As Button
 End Class
