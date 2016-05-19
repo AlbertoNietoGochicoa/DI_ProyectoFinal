@@ -6,6 +6,7 @@ Public Class ModProductForm
     Dim ds As New DataSet
     Dim da As SqlDataAdapter
     Dim con As SqlConnection
+    Dim cmd As sqlCo
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         'Cerramos la ventana y volvemos
@@ -22,7 +23,7 @@ Public Class ModProductForm
         Dim sql As String = "SELECT cod_prod, nom_prod, precio, stock, stock_minimo FROM PRODUCTO"
 
         'consulta
-        Dim cmd As New SqlCommand(sql, con)
+        cmd = New SqlCommand(sql, con)
         da = New SqlDataAdapter(cmd)
 
         'Ejecuta la consulta y recupera los datos del proveedor
@@ -53,6 +54,16 @@ Public Class ModProductForm
         Dim mbd As New ManejadorBD
 
         mbd.modificarProducto(Me.TextBoxCodProd.Text, Me.TextBoxNombre.Text, Me.TextBoxPrecio.Text, Me.TextBoxStock.Text, Me.TextBoxStockMin.Text, Me.TextBoxDescripcion.Text)
+
+        'Establece la conexion con el origen de los datos
+        Dim sql As String = "SELECT cod_prod, nom_prod, precio, stock, stock_minimo FROM PRODUCTO"
+
+        'consulta
+        cmd = New SqlCommand(sql, con)
+        da = New SqlDataAdapter(cmd)
+
+        da.Fill(ds, "PRODUCTO")
+        rellenarTextBox()
 
 
     End Sub
