@@ -6,9 +6,8 @@ Public Class ManejadorBD
 
     'Hacemos la conexion
 
-    ' Conexión Alberto Dim con As SqlConnection = New SqlConnection(My.Settings.conexion)
-    ' Conexión Lander
-    Dim conexionLander As SqlConnection = New SqlConnection(My.Settings.conLander)
+    Dim con As SqlConnection = New SqlConnection(My.Settings.conexion)
+
     ' Objetos
     Dim da As SqlDataAdapter
     Dim dsLinea As DataSet
@@ -22,7 +21,7 @@ Public Class ManejadorBD
         ' String para la consulta
         Dim sql As String = "Select * From SOCIO"
         ' Nos quedamos en comando con el string del SQL y la conexión
-        Dim comando As New SqlCommand(sql, conexionLander)
+        Dim comando As New SqlCommand(sql, con)
 
 
         Try
@@ -49,7 +48,7 @@ Public Class ManejadorBD
         ' String para la consulta
         Dim sql As String = "Select * From PRODUCTO"
         ' Nos quedamos en comando con el string del SQL y la conexión
-        Dim comando As New SqlCommand(sql, conexionLander)
+        Dim comando As New SqlCommand(sql, con)
 
 
         Try
@@ -73,7 +72,7 @@ Public Class ManejadorBD
         ' String para la consulta
         Dim sql As String = "Select * From LINEA_PEDIDO"
         ' Nos quedamos en comando con el string del SQL y la conexión
-        Dim comando As New SqlCommand(sql, conexionLander)
+        Dim comando As New SqlCommand(sql, con)
 
 
         Try
@@ -97,7 +96,7 @@ Public Class ManejadorBD
 
         Dim ventanaAnadiSocio As New añadirSocioForm
 
-        Dim command As New SqlCommand("ANADIRSOCIO", conexionLander)
+        Dim command As New SqlCommand("ANADIRSOCIO", con)
         command.CommandType = CommandType.StoredProcedure
 
         command.Parameters.AddWithValue("@dni", ventanaAnadiSocio.TextBoxDni.Text)
@@ -108,7 +107,7 @@ Public Class ManejadorBD
         command.Parameters.AddWithValue("@observacions", ventanaAnadiSocio.TextBoxObservaciones.Text)
 
         Try
-            conexionLander.Open()
+            con.Open()
         Catch ex As SqlException
             MsgBox("Imposible conectarse a la BD")
         End Try
@@ -121,7 +120,7 @@ Public Class ManejadorBD
         End Try
 
 
-        conexionLander.Close()
+        con.Close()
 
         Beep()
         MsgBox("hecho")
@@ -136,7 +135,7 @@ Public Class ManejadorBD
         'MsgBox(v4)
         'MsgBox(v5)
 
-        Dim command As New SqlCommand("ADDPRODUCTO", conexionLander)
+        Dim command As New SqlCommand("ADDPRODUCTO", con)
         command.CommandType = CommandType.StoredProcedure
 
         command.Parameters.AddWithValue("@nom_prod", v1)
@@ -146,21 +145,22 @@ Public Class ManejadorBD
         command.Parameters.AddWithValue("@descripcion", v5)
 
         Try
-            conexionLander.Open()
+            con.Open()
 
         Catch ex As SqlException
             MsgBox("Imposible conectarse a la BD")
         End Try
         Try
             command.ExecuteNonQuery()
+            Beep()
+            MsgBox("Producto añadido correctamente")
 
         Catch ex As SqlException
             MsgBox("No se puede hacer la inserción del producto")
         End Try
 
-        conexionLander.Close()
+        con.Close()
 
-        MsgBox("Producto añadido correctamente")
     End Sub
 
 End Class
