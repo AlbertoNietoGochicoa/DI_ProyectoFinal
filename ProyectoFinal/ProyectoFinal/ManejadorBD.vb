@@ -163,5 +163,34 @@ Public Class ManejadorBD
 
     End Sub
 
+    Sub modificarProducto(ByRef v1, ByRef v2, ByRef v3, ByRef v4, ByRef v5, ByRef v6)
+        Dim command As New SqlCommand("MODIFICARPRODUCTO", con)
+        command.CommandType = CommandType.StoredProcedure
+
+        command.Parameters.AddWithValue("@cod_prod", v1)
+        command.Parameters.AddWithValue("@nom_prod", v2)
+        command.Parameters.AddWithValue("@precio", v3)
+        command.Parameters.AddWithValue("@stock", v4)
+        command.Parameters.AddWithValue("@stock_minimo", v5)
+        command.Parameters.AddWithValue("@descripcion", v6)
+
+        Try
+            con.Open()
+
+        Catch ex As SqlException
+            MsgBox("Imposible conectarse a la BD")
+        End Try
+        Try
+            command.ExecuteNonQuery()
+            Beep()
+            MsgBox("Producto modificado correctamente")
+
+        Catch ex As SqlException
+            MsgBox("No se puede hacer la modificacion del producto")
+        End Try
+
+        con.Close()
+
+    End Sub
 End Class
 

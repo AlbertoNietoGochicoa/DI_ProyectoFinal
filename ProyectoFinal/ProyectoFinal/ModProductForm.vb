@@ -50,6 +50,11 @@ Public Class ModProductForm
         'Boton de guardar, insertamos la informacion en la base de datos.
 
 
+        Dim mbd As New ManejadorBD
+
+        mbd.modificarProducto(Me.TextBoxCodProd.Text, Me.TextBoxNombre.Text, Me.TextBoxPrecio.Text, Me.TextBoxStock.Text, Me.TextBoxStockMin.Text, Me.TextBoxDescripcion.Text)
+
+
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
