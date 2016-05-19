@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ModProductForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class ModProductForm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.TextBoxDescripcion = New System.Windows.Forms.TextBox()
         Me.TextBoxStockMin = New System.Windows.Forms.TextBox()
@@ -35,11 +35,6 @@ Partial Class ModProductForm
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.TextBoxBuscar = New System.Windows.Forms.TextBox()
-        Me.ButtonBuscar = New System.Windows.Forms.Button()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'TextBoxDescripcion
@@ -150,58 +145,11 @@ Partial Class ModProductForm
         Me.Label6.TabIndex = 37
         Me.Label6.Text = "_________________________________________________________________"
         '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(127, 81)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(143, 21)
-        Me.ComboBox1.TabIndex = 42
-        '
-        'TextBoxBuscar
-        '
-        Me.TextBoxBuscar.Location = New System.Drawing.Point(127, 45)
-        Me.TextBoxBuscar.Name = "TextBoxBuscar"
-        Me.TextBoxBuscar.Size = New System.Drawing.Size(143, 20)
-        Me.TextBoxBuscar.TabIndex = 41
-        '
-        'ButtonBuscar
-        '
-        Me.ButtonBuscar.Location = New System.Drawing.Point(317, 42)
-        Me.ButtonBuscar.Name = "ButtonBuscar"
-        Me.ButtonBuscar.Size = New System.Drawing.Size(75, 23)
-        Me.ButtonBuscar.TabIndex = 40
-        Me.ButtonBuscar.Text = "Buscar"
-        Me.ButtonBuscar.UseVisualStyleBackColor = True
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(31, 84)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(72, 13)
-        Me.Label7.TabIndex = 39
-        Me.Label7.Text = "En el campo: "
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(57, 48)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(46, 13)
-        Me.Label8.TabIndex = 38
-        Me.Label8.Text = "Buscar: "
-        '
         'ModProductForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(457, 507)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.TextBoxBuscar)
-        Me.Controls.Add(Me.ButtonBuscar)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -235,9 +183,4 @@ Partial Class ModProductForm
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Label6 As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents TextBoxBuscar As TextBox
-    Friend WithEvents ButtonBuscar As Button
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label8 As Label
 End Class
