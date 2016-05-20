@@ -6,7 +6,7 @@ Public Class ModProductForm
     Dim ds As New DataSet
     Dim da As SqlDataAdapter
     Dim con As SqlConnection
-    Dim cmd As sqlCo
+    Dim cmd As SqlCommand
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         'Cerramos la ventana y volvemos

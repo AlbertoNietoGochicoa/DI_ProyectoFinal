@@ -23,11 +23,6 @@ Partial Class ElimProductoForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.TextBoxBuscar = New System.Windows.Forms.TextBox()
-        Me.ButtonBuscar = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.ButtonVolver = New System.Windows.Forms.Button()
         Me.ButtonEliminar = New System.Windows.Forms.Button()
         Me.TextBoxDescripcion = New System.Windows.Forms.TextBox()
@@ -40,58 +35,22 @@ Partial Class ElimProductoForm
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(34, 111)
+        Me.Label4.Location = New System.Drawing.Point(34, 83)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(361, 13)
         Me.Label4.TabIndex = 17
         Me.Label4.Text = "___________________________________________________________"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(148, 69)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(143, 21)
-        Me.ComboBox1.TabIndex = 16
-        '
-        'TextBoxBuscar
-        '
-        Me.TextBoxBuscar.Location = New System.Drawing.Point(148, 33)
-        Me.TextBoxBuscar.Name = "TextBoxBuscar"
-        Me.TextBoxBuscar.Size = New System.Drawing.Size(143, 20)
-        Me.TextBoxBuscar.TabIndex = 15
-        '
-        'ButtonBuscar
-        '
-        Me.ButtonBuscar.Location = New System.Drawing.Point(333, 48)
-        Me.ButtonBuscar.Name = "ButtonBuscar"
-        Me.ButtonBuscar.Size = New System.Drawing.Size(75, 23)
-        Me.ButtonBuscar.TabIndex = 14
-        Me.ButtonBuscar.Text = "Buscar"
-        Me.ButtonBuscar.UseVisualStyleBackColor = True
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(52, 72)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(72, 13)
-        Me.Label2.TabIndex = 13
-        Me.Label2.Text = "En el campo: "
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(78, 36)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(46, 13)
-        Me.Label1.TabIndex = 12
-        Me.Label1.Text = "Buscar: "
         '
         'ButtonVolver
         '
@@ -142,7 +101,7 @@ Partial Class ElimProductoForm
         '
         'TextBoxCodProd
         '
-        Me.TextBoxCodProd.Location = New System.Drawing.Point(173, 156)
+        Me.TextBoxCodProd.Location = New System.Drawing.Point(173, 119)
         Me.TextBoxCodProd.Name = "TextBoxCodProd"
         Me.TextBoxCodProd.Size = New System.Drawing.Size(222, 20)
         Me.TextBoxCodProd.TabIndex = 42
@@ -186,17 +145,75 @@ Partial Class ElimProductoForm
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(37, 159)
+        Me.Label8.Location = New System.Drawing.Point(37, 122)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(105, 13)
         Me.Label8.TabIndex = 37
         Me.Label8.Text = "Codigo del producto:"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(173, 159)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(222, 20)
+        Me.TextBox1.TabIndex = 50
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(37, 162)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(109, 13)
+        Me.Label1.TabIndex = 49
+        Me.Label1.Text = "Nombre del producto:"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(40, 23)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(51, 45)
+        Me.Button1.TabIndex = 51
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(140, 23)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(51, 45)
+        Me.Button2.TabIndex = 52
+        Me.Button2.Text = "Button2"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(244, 23)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(51, 45)
+        Me.Button3.TabIndex = 53
+        Me.Button3.Text = "Button3"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(344, 23)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(51, 45)
+        Me.Button4.TabIndex = 54
+        Me.Button4.Text = "Button4"
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'ElimProductoForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(442, 468)
+        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ButtonVolver)
         Me.Controls.Add(Me.ButtonEliminar)
         Me.Controls.Add(Me.TextBoxDescripcion)
@@ -210,11 +227,6 @@ Partial Class ElimProductoForm
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.TextBoxBuscar)
-        Me.Controls.Add(Me.ButtonBuscar)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
         Me.Name = "ElimProductoForm"
         Me.Text = "Eliminar producto"
         Me.ResumeLayout(False)
@@ -223,11 +235,6 @@ Partial Class ElimProductoForm
     End Sub
 
     Friend WithEvents Label4 As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents TextBoxBuscar As TextBox
-    Friend WithEvents ButtonBuscar As Button
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents ButtonVolver As Button
     Friend WithEvents ButtonEliminar As Button
     Friend WithEvents TextBoxDescripcion As TextBox
@@ -240,4 +247,10 @@ Partial Class ElimProductoForm
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
 End Class
