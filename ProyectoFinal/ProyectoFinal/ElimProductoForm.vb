@@ -63,4 +63,59 @@ Public Class ElimProductoForm
         End Try
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        ' Boton de ir al principio ( boton << )
+
+        If contador = 0 Then
+            Beep()
+            MsgBox("Estas en el primer elemento de la tabla")
+        Else
+            contador = 0
+        End If
+
+        rellenarTextBox()
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        ' Boton de retroceder de uno en uno  (boton <) 
+        If contador <> 0 Then
+            contador = contador - 1
+
+        Else
+            Beep()
+            MsgBox("Has llegado al Principio de la lista")
+        End If
+
+        rellenarTextBox()
+
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        ' Boton de avanzar de uno en uno
+        If contador < ds.Tables("PRODUCTO").Rows.Count - 1 Then
+            contador = contador + 1
+
+        Else
+            Beep()
+            MsgBox("Has llegado al final de la lista")
+        End If
+
+        rellenarTextBox()
+
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        ' Boton de ir al final  (boton >> )
+
+        If contador = ds.Tables("PRODUCTO").Rows.Count Then
+            Beep()
+            MsgBox("Estas en el ultimo elemento de la tabla")
+        Else
+            contador = ds.Tables("PRODUCTO").Rows.Count - 1
+        End If
+
+        rellenarTextBox()
+
+    End Sub
 End Class
