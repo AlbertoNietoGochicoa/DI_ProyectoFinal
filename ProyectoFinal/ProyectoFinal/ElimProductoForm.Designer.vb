@@ -173,7 +173,7 @@ Partial Class ElimProductoForm
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(51, 45)
         Me.Button1.TabIndex = 51
-        Me.Button1.Text = "Button1"
+        Me.Button1.Text = "<<"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
@@ -182,7 +182,7 @@ Partial Class ElimProductoForm
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(51, 45)
         Me.Button2.TabIndex = 52
-        Me.Button2.Text = "Button2"
+        Me.Button2.Text = "<"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
@@ -191,7 +191,7 @@ Partial Class ElimProductoForm
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(51, 45)
         Me.Button3.TabIndex = 53
-        Me.Button3.Text = "Button3"
+        Me.Button3.Text = ">"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button4
@@ -200,7 +200,7 @@ Partial Class ElimProductoForm
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(51, 45)
         Me.Button4.TabIndex = 54
-        Me.Button4.Text = "Button4"
+        Me.Button4.Text = ">>"
         Me.Button4.UseVisualStyleBackColor = True
         '
         'ElimProductoForm
