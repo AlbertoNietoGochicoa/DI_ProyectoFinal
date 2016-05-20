@@ -118,4 +118,24 @@ Public Class ElimProductoForm
         rellenarTextBox()
 
     End Sub
+
+    Private Sub ButtonEliminar_Click(sender As Object, e As EventArgs) Handles ButtonEliminar.Click
+        Dim codigo = TextBoxCodProd.Text
+        'Eliminamos la fila del dataset
+        ds.Tables("PRODUCTO").Rows(contador).Delete()
+        'Hay que eliminar la fila del dataAdapter!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        'Limpiamos todos los textBox de la fila
+        limpiarTextBox()
+
+
+        ' consulta sql para eliminar de la bd
+        da.DeleteCommand = New SqlCommand("DELETE FROM PRODUCTO WHERE cod_prod=@cod_prod", con)
+        da.DeleteCommand.Parameters.Add("@cod_prod", SqlDbType.Int).Value = codigo
+
+        ' update
+        da.Update(ds, "PRODUCTO")
+        MsgBox("ELIMINADO")
+
+    End Sub
 End Class
