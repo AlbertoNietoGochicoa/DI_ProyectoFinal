@@ -35,7 +35,7 @@ Partial Class ElimProductoForm
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBoxNombProd = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -151,12 +151,12 @@ Partial Class ElimProductoForm
         Me.Label8.TabIndex = 37
         Me.Label8.Text = "Codigo del producto:"
         '
-        'TextBox1
+        'TextBoxNombProd
         '
-        Me.TextBox1.Location = New System.Drawing.Point(173, 159)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(222, 20)
-        Me.TextBox1.TabIndex = 50
+        Me.TextBoxNombProd.Location = New System.Drawing.Point(173, 159)
+        Me.TextBoxNombProd.Name = "TextBoxNombProd"
+        Me.TextBoxNombProd.Size = New System.Drawing.Size(222, 20)
+        Me.TextBoxNombProd.TabIndex = 50
         '
         'Label1
         '
@@ -212,7 +212,7 @@ Partial Class ElimProductoForm
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.TextBoxNombProd)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ButtonVolver)
         Me.Controls.Add(Me.ButtonEliminar)
@@ -247,7 +247,7 @@ Partial Class ElimProductoForm
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TextBoxNombProd As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
