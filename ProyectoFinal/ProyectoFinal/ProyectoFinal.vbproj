@@ -171,6 +171,11 @@
     <Compile Include="NewProductForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="sociedadGastronomicaDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sociedadGastronomicaDataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AcercaDeForm.resx">
@@ -230,6 +235,17 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="sociedadGastronomicaDataSet.xsc">
+      <DependentUpon>sociedadGastronomicaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="sociedadGastronomicaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sociedadGastronomicaDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sociedadGastronomicaDataSet.xss">
+      <DependentUpon>sociedadGastronomicaDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\langosta.jpeg" />

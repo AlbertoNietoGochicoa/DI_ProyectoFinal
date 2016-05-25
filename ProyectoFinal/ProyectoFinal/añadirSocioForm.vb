@@ -21,8 +21,37 @@
     End Sub
 
     Private Sub ButtonSeleccionar_Click(sender As Object, e As EventArgs) Handles ButtonSeleccionar.Click
+        'Abrir el navegador para cargar la imagen
 
-        PictureBox1.Image = Image.FromFile("C:\Users\Public\Pictures\Sample Pictures\Koala.jpg")
+        Dim imagen As Image
+        Dim dialogo As New OpenFileDialog
+        dialogo.InitialDirectory = "C:"
+
+        dialogo.Filter = "(*.*)|*.*|(*.jpeg) |*.jpeg |(*.png)|*.png"
+        dialogo.FilterIndex = 1
+
+        If dialogo.ShowDialog() = DialogResult.OK Then
+
+            PictureBox1.Image = Image.FromFile(dialogo.FileName)
+
+
+
+            '      // Stream usado como buffer
+
+            Dim MS As New System.IO.MemoryStream
+            '// Se guarda la imagen en el buffer
+            PictureBox1.Image.Save(MS, Imaging.ImageFormat.Jpeg)
+
+
+            '// Se extraen los bytes del buffer para asignarlos como valor para el parámetro.
+            '  cmd.Parameters["@image"].Value = ms.GetBuffer()
+
+        End If
+
+
+
+
+
 
     End Sub
 End Class

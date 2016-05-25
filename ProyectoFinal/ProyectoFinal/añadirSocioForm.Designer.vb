@@ -132,7 +132,7 @@ Partial Class añadirSocioForm
         '
         'ButtonSeleccionar
         '
-        Me.ButtonSeleccionar.Location = New System.Drawing.Point(556, 195)
+        Me.ButtonSeleccionar.Location = New System.Drawing.Point(557, 247)
         Me.ButtonSeleccionar.Name = "ButtonSeleccionar"
         Me.ButtonSeleccionar.Size = New System.Drawing.Size(75, 23)
         Me.ButtonSeleccionar.TabIndex = 12
@@ -159,9 +159,10 @@ Partial Class añadirSocioForm
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(532, 70)
+        Me.PictureBox1.Location = New System.Drawing.Point(500, 65)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(113, 90)
+        Me.PictureBox1.Size = New System.Drawing.Size(187, 154)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 15
         Me.PictureBox1.TabStop = False
         '
