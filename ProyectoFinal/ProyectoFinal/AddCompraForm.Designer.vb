@@ -140,7 +140,7 @@ Partial Class AddCompraForm
         Me.TextBoxDni.Size = New System.Drawing.Size(121, 20)
         Me.TextBoxDni.TabIndex = 11
         '
-        'AddPedidoForm
+        'AddCompraForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -157,7 +157,7 @@ Partial Class AddCompraForm
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "AddPedidoForm"
+        Me.Name = "AddCompraForm"
         Me.Text = "Añadir pedido"
         Me.ResumeLayout(False)
         Me.PerformLayout()

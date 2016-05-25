@@ -128,12 +128,6 @@ Public Class ManejadorBD
     End Sub
     Public Sub anadirProducto(ByRef v1, ByRef v2, ByRef v3, ByRef v4, ByRef v5)
 
-        ' Debug
-        'MsgBox(v1)
-        'MsgBox(v2)
-        'MsgBox(v3)
-        'MsgBox(v4)
-        'MsgBox(v5)
 
         Dim command As New SqlCommand("ADDPRODUCTO", con)
         command.CommandType = CommandType.StoredProcedure

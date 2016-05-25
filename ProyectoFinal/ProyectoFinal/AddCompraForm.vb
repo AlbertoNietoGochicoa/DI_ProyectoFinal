@@ -5,4 +5,8 @@
         'Cerramos la ventana de añadir pedido
         Me.Close()
     End Sub
+
+    Private Sub AddCompraForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

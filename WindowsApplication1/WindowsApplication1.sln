@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "repaso2", "repaso2\repaso2.vbproj", "{2C0044BA-ABB1-450C-9482-BEC95C6CAEB1}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WindowsApplication1", "WindowsApplication1\WindowsApplication1.vbproj", "{E22CB08A-4A32-4D0B-BD83-C63B0C434DE4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2C0044BA-ABB1-450C-9482-BEC95C6CAEB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2C0044BA-ABB1-450C-9482-BEC95C6CAEB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2C0044BA-ABB1-450C-9482-BEC95C6CAEB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2C0044BA-ABB1-450C-9482-BEC95C6CAEB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E22CB08A-4A32-4D0B-BD83-C63B0C434DE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E22CB08A-4A32-4D0B-BD83-C63B0C434DE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E22CB08A-4A32-4D0B-BD83-C63B0C434DE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E22CB08A-4A32-4D0B-BD83-C63B0C434DE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

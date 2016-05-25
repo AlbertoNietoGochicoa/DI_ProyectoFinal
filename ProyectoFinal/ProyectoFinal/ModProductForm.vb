@@ -34,6 +34,21 @@ Public Class ModProductForm
         'LLamamos al metodo rellenar
         rellenarTextBox()
 
+
+        'Rellenamos el combobox
+        'Rellenamos el combobox
+        Dim total As Integer = (ds.Tables("PRODUCTO").Rows.Count - 1)
+        Dim cont = 0
+        For index As Integer = 0 To total
+
+            ComboBox1.Items.Add(ds.Tables("PRODUCTO").Rows(cont).Item("nom_prod").ToString)
+            cont += 1
+        Next
+
+
+
+
+
     End Sub
     Sub rellenarTextBox()
         Try
@@ -121,6 +136,11 @@ Public Class ModProductForm
         End If
 
         rellenarTextBox()
+
+    End Sub
+
+    Private Sub ButtonBuscar_Click(sender As Object, e As EventArgs) Handles ButtonBuscar.Click
+        'Recuperar los datos 
 
     End Sub
 End Class
