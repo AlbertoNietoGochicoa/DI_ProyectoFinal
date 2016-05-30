@@ -27,7 +27,7 @@
         Dim dialogo As New OpenFileDialog
         dialogo.InitialDirectory = "C:"
 
-        dialogo.Filter = "(*.*)|*.*|(*.jpeg) |*.jpeg |(*.png)|*.png"
+        dialogo.Filter = "(*.*)|*.*|(*.jpg) |*.jpg |(*.png)|*.png"
         dialogo.FilterIndex = 1
 
         If dialogo.ShowDialog() = DialogResult.OK Then

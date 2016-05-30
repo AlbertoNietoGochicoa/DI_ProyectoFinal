@@ -12,6 +12,13 @@
 
         mbd.anadirProducto(Me.TextBoxNombProd.Text, Me.TextBoxPrecio.Text, Me.TextBoxStock.Text, Me.TextBoxStockMin.Text, Me.TextBoxDescrip.Text)
 
+        'limpiar los texbox
+        TextBoxNombProd.Clear()
+        TextBoxPrecio.Clear()
+        TextBoxStock.Clear()
+        TextBoxStockMin.Clear()
+        TextBoxDescrip.Clear()
+
 
     End Sub
 
