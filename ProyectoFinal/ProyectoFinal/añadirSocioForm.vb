@@ -27,7 +27,7 @@
         Dim dialogo As New OpenFileDialog
         dialogo.InitialDirectory = "C:"
 
-        dialogo.Filter = "(*.*)|*.*|(*.jpg) |*.jpg |(*.png)|*.png"
+        dialogo.Filter = "(*.jpg) |*.jpg"
         dialogo.FilterIndex = 1
 
         If dialogo.ShowDialog() = DialogResult.OK Then
@@ -36,9 +36,9 @@
 
 
 
-            '      // Stream usado como buffer
+            ' Stream usado como buffer
 
-            Dim MS As New System.IO.MemoryStream
+            Dim MS As New IO.MemoryStream
             '// Se guarda la imagen en el buffer
             PictureBox1.Image.Save(MS, Imaging.ImageFormat.Jpeg)
 
