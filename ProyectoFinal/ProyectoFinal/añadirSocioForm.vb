@@ -22,6 +22,8 @@ Public Class añadirSocioForm
 
         If TextBoxDni.Text.Length = 0 Then
             MsgBox("El campo DNI es obligatorio")
+        ElseIf TextBoxDni.Text.Length < 9 Then
+            MsgBox("El DNI tiene que tener 9 caracteres")
         ElseIf TextBoxNombre.Text.Length = 0 Then
             MsgBox("El campo Nombre es obligatorio")
         ElseIf TextBoxIban.Text.Length = 0 Then
@@ -79,14 +81,10 @@ Public Class añadirSocioForm
 
         dialogo.Filter = "(*.jpg) |*.jpg"
         dialogo.FilterIndex = 1
-        Dim mbd = New ManejadorBD
 
         If dialogo.ShowDialog() = DialogResult.OK Then
 
             PictureBox1.Image = Image.FromFile(dialogo.FileName)
-
-
-
 
             '// Se guarda la imagen en el buffer
             Try
