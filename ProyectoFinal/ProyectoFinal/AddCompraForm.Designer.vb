@@ -33,7 +33,7 @@ Partial Class AddCompraForm
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBoxDni = New System.Windows.Forms.TextBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -133,19 +133,20 @@ Partial Class AddCompraForm
         Me.Label5.TabIndex = 10
         Me.Label5.Text = "D.N.I:"
         '
-        'TextBoxDni
+        'ComboBox1
         '
-        Me.TextBoxDni.Location = New System.Drawing.Point(129, 148)
-        Me.TextBoxDni.Name = "TextBoxDni"
-        Me.TextBoxDni.Size = New System.Drawing.Size(121, 20)
-        Me.TextBoxDni.TabIndex = 11
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(129, 148)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.TabIndex = 12
         '
         'AddCompraForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(799, 488)
-        Me.Controls.Add(Me.TextBoxDni)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
@@ -175,5 +176,5 @@ Partial Class AddCompraForm
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBoxDni As TextBox
+    Friend WithEvents ComboBox1 As ComboBox
 End Class
