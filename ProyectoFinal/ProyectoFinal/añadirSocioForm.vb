@@ -18,6 +18,7 @@ Public Class añadirSocioForm
     Private Sub ButtonGuardar_Click(sender As Object, e As EventArgs) Handles ButtonGuardar.Click
         ' Referencia a la clase
         Dim mbd = New ManejadorBD
+        Dim cmd = New SqlCommand
         ' Debug
         Try
             mbd.anadirSocio(TextBoxDni.Text, TextBoxNombre.Text, TextBoxMail.Text, TextBoxIban, PictureBox1.Image, TextBoxObservaciones)
@@ -38,7 +39,7 @@ Public Class añadirSocioForm
         Else
 
             Try
-                Dim cmd = New SqlCommand
+
                 cmd.Connection = mbd.con
                 cmd.CommandText = "INSERT INTO SOCIO VALUES (@dni,@nom_soc,@email,@iban,@foto,@observacions)"
 
