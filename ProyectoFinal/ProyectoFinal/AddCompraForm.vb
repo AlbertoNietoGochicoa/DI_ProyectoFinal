@@ -3,6 +3,7 @@
 Public Class AddCompraForm
 
     Dim total As Double
+    Dim codigo As Integer
 
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
@@ -110,6 +111,10 @@ Public Class AddCompraForm
         Dim manejador As New ManejadorBD
 
         manejador.anadirPedido(ComboBox1.Text, total)
+
+
+
+
 
     End Sub
 

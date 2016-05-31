@@ -25,10 +25,9 @@ Partial Class ListaPedidoForm
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.ButtonCargar = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -59,14 +58,6 @@ Partial Class ListaPedidoForm
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "D.N.I: del socio: "
         '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(27, 151)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(510, 190)
-        Me.DataGridView1.TabIndex = 5
-        '
         'ButtonCargar
         '
         Me.ButtonCargar.Location = New System.Drawing.Point(347, 49)
@@ -84,20 +75,27 @@ Partial Class ListaPedidoForm
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox1.TabIndex = 13
         '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(81, 167)
+        Me.TextBox2.Multiline = True
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(447, 186)
+        Me.TextBox2.TabIndex = 14
+        '
         'ListaPedidoForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(572, 433)
+        Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.ButtonCargar)
-        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "ListaPedidoForm"
         Me.Text = "Lista de todas las compras efectuadas"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -106,7 +104,7 @@ Partial Class ListaPedidoForm
     Friend WithEvents Label1 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Label2 As Label
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents ButtonCargar As Button
     Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents TextBox2 As TextBox
 End Class
