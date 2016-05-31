@@ -1,4 +1,10 @@
-﻿Public Class añadirSocioForm
+﻿Imports System.Data.SqlClient
+
+Public Class añadirSocioForm
+
+    ' Stream usado como buffer
+
+    Dim MS As New IO.MemoryStream
 
     Private Sub añadirSocioForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -14,8 +20,54 @@
         Dim mbd = New ManejadorBD
         ' Debug
 
+        If TextBoxDni.Text.Length = 0 Then
+            MsgBox("El campo DNI es obligatorio")
+        ElseIf TextBoxDni.Text.Length < 9 Then
+            MsgBox("El DNI tiene que tener 9 caracteres")
+        ElseIf TextBoxNombre.Text.Length = 0 Then
+            MsgBox("El campo Nombre es obligatorio")
+        ElseIf TextBoxIban.Text.Length = 0 Then
+            MsgBox("El campo IBAN es obligatorio")
+        Else
+            Dim cmd = New SqlCommand
+            cmd.Connection = mbd.con
+            cmd.CommandText = "INSERT INTO SOCIO VALUES (@dni,@nom_soc,@email,@iban,@foto,@observacions)"
 
-        ' mbd.anadirSocio(TextBoxDni.Text, TextBoxNombre.Text, TextBoxMail.Text, TextBoxIban, TextBoxImagen, TextBoxObservaciones)
+
+            cmd.Parameters.AddWithValue("@dni", TextBoxDni.Text)
+            cmd.Parameters.AddWithValue("@nom_soc", TextBoxNombre.Text)
+            cmd.Parameters.AddWithValue("@email", TextBoxMail.Text)
+            cmd.Parameters.AddWithValue("@iban", TextBoxIban.Text)
+            cmd.Parameters.Add("@foto", SqlDbType.Image).Value = MS.GetBuffer()
+            cmd.Parameters.AddWithValue("@observacions", TextBoxObservaciones.Text)
+
+            Try
+                mbd.con.Open()
+                MsgBox("Conexión abierta")
+            Catch ex As SqlException
+                MsgBox("No se puede conectar")
+            End Try
+
+            Try
+                cmd.ExecuteNonQuery()
+                MsgBox("Nuevo socio guardado")
+            Catch ex As SqlException
+                MsgBox(ex.ToString)
+            Finally
+                mbd.con.Close()
+
+            End Try
+
+
+
+
+
+        End If
+
+
+
+
+
 
 
     End Sub
@@ -23,28 +75,28 @@
     Private Sub ButtonSeleccionar_Click(sender As Object, e As EventArgs) Handles ButtonSeleccionar.Click
         'Abrir el navegador para cargar la imagen
 
-        Dim imagen As Image
+
         Dim dialogo As New OpenFileDialog
         dialogo.InitialDirectory = "C:"
 
-        dialogo.Filter = "(*.*)|*.*|(*.jpg) |*.jpg |(*.png)|*.png"
+        dialogo.Filter = "(*.jpg) |*.jpg"
         dialogo.FilterIndex = 1
 
         If dialogo.ShowDialog() = DialogResult.OK Then
 
             PictureBox1.Image = Image.FromFile(dialogo.FileName)
 
-
-
-            '      // Stream usado como buffer
-
-            Dim MS As New System.IO.MemoryStream
             '// Se guarda la imagen en el buffer
-            PictureBox1.Image.Save(MS, Imaging.ImageFormat.Jpeg)
+            Try
+                PictureBox1.Image.Save(MS, Imaging.ImageFormat.Jpeg)
+            Catch ex As Exception
+                MsgBox("La imagen tiene que estar en .jpg")
+            End Try
+
+            MsgBox(MS.GetBuffer().Length)
 
 
-            '// Se extraen los bytes del buffer para asignarlos como valor para el parámetro.
-            '  cmd.Parameters["@image"].Value = ms.GetBuffer()
+
 
         End If
 
