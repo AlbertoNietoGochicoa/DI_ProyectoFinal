@@ -24,9 +24,6 @@ Partial Class ModificarSocioForm
     Private Sub InitializeComponent()
         Me.ButtonVolver = New System.Windows.Forms.Button()
         Me.ButtonGuardar = New System.Windows.Forms.Button()
-        Me.ButtonSleccionar = New System.Windows.Forms.Button()
-        Me.TextBoxImagen = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBoxObservaciones = New System.Windows.Forms.TextBox()
         Me.TextBoxMail = New System.Windows.Forms.TextBox()
         Me.TextBoxIban = New System.Windows.Forms.TextBox()
@@ -46,7 +43,7 @@ Partial Class ModificarSocioForm
         '
         'ButtonVolver
         '
-        Me.ButtonVolver.Location = New System.Drawing.Point(473, 428)
+        Me.ButtonVolver.Location = New System.Drawing.Point(284, 428)
         Me.ButtonVolver.Name = "ButtonVolver"
         Me.ButtonVolver.Size = New System.Drawing.Size(75, 23)
         Me.ButtonVolver.TabIndex = 29
@@ -55,37 +52,12 @@ Partial Class ModificarSocioForm
         '
         'ButtonGuardar
         '
-        Me.ButtonGuardar.Location = New System.Drawing.Point(284, 428)
+        Me.ButtonGuardar.Location = New System.Drawing.Point(69, 428)
         Me.ButtonGuardar.Name = "ButtonGuardar"
         Me.ButtonGuardar.Size = New System.Drawing.Size(75, 23)
         Me.ButtonGuardar.TabIndex = 28
         Me.ButtonGuardar.Text = "Guardar"
         Me.ButtonGuardar.UseVisualStyleBackColor = True
-        '
-        'ButtonSleccionar
-        '
-        Me.ButtonSleccionar.Location = New System.Drawing.Point(571, 297)
-        Me.ButtonSleccionar.Name = "ButtonSleccionar"
-        Me.ButtonSleccionar.Size = New System.Drawing.Size(75, 23)
-        Me.ButtonSleccionar.TabIndex = 27
-        Me.ButtonSleccionar.Text = "Seleccionar"
-        Me.ButtonSleccionar.UseVisualStyleBackColor = True
-        '
-        'TextBoxImagen
-        '
-        Me.TextBoxImagen.Location = New System.Drawing.Point(503, 242)
-        Me.TextBoxImagen.Name = "TextBoxImagen"
-        Me.TextBoxImagen.Size = New System.Drawing.Size(191, 20)
-        Me.TextBoxImagen.TabIndex = 26
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(442, 245)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(45, 13)
-        Me.Label6.TabIndex = 25
-        Me.Label6.Text = "Imagen:"
         '
         'TextBoxObservaciones
         '
@@ -180,36 +152,36 @@ Partial Class ModificarSocioForm
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(168, 21)
+        Me.Button4.Location = New System.Drawing.Point(66, 28)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 58)
+        Me.Button4.Size = New System.Drawing.Size(54, 46)
         Me.Button4.TabIndex = 44
         Me.Button4.Text = "<<"
         Me.Button4.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(524, 21)
+        Me.Button3.Location = New System.Drawing.Point(338, 28)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 58)
+        Me.Button3.Size = New System.Drawing.Size(54, 46)
         Me.Button3.TabIndex = 43
         Me.Button3.Text = ">>"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(393, 21)
+        Me.Button2.Location = New System.Drawing.Point(247, 28)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 58)
+        Me.Button2.Size = New System.Drawing.Size(54, 46)
         Me.Button2.TabIndex = 42
         Me.Button2.Text = ">"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(284, 21)
+        Me.Button1.Location = New System.Drawing.Point(149, 28)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 58)
+        Me.Button1.Size = New System.Drawing.Size(54, 46)
         Me.Button1.TabIndex = 41
         Me.Button1.Text = "<"
         Me.Button1.UseVisualStyleBackColor = True
@@ -218,7 +190,7 @@ Partial Class ModificarSocioForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(767, 477)
+        Me.ClientSize = New System.Drawing.Size(461, 487)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
@@ -226,9 +198,6 @@ Partial Class ModificarSocioForm
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.ButtonVolver)
         Me.Controls.Add(Me.ButtonGuardar)
-        Me.Controls.Add(Me.ButtonSleccionar)
-        Me.Controls.Add(Me.TextBoxImagen)
-        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.TextBoxObservaciones)
         Me.Controls.Add(Me.TextBoxMail)
         Me.Controls.Add(Me.TextBoxIban)
@@ -247,9 +216,6 @@ Partial Class ModificarSocioForm
     End Sub
     Friend WithEvents ButtonVolver As Button
     Friend WithEvents ButtonGuardar As Button
-    Friend WithEvents ButtonSleccionar As Button
-    Friend WithEvents TextBoxImagen As TextBox
-    Friend WithEvents Label6 As Label
     Friend WithEvents TextBoxObservaciones As TextBox
     Friend WithEvents TextBoxMail As TextBox
     Friend WithEvents TextBoxIban As TextBox

@@ -103,6 +103,7 @@ Public Class ModificarSocioForm
         da.Update(ds, "SOCIO")
         contador = 0
         rellenarTextBox()
+        Me.Close()
 
     End Sub
 End Class

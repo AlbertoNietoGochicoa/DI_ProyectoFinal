@@ -204,14 +204,14 @@ Public Class ManejadorBD
         Catch ex As SqlException
             MsgBox("Imposible conectarse a la BD")
         End Try
-        '  Try
-        command.ExecuteNonQuery()
+        Try
+            command.ExecuteNonQuery()
             Beep()
             MsgBox("Socio modificado correctamente")
 
-        '    '     Catch ex As SqlException
-        '   MsgBox("No se puede hacer la modificacion del Socio")
-        '    End Try
+        Catch ex As SqlException
+            MsgBox("No se puede hacer la modificacion del Socio")
+        End Try
 
         con.Close()
 

@@ -75,7 +75,7 @@ Public Class ModProductForm
         da.Update(ds, "PRODUCTO")
         contador = 0
         rellenarTextBox()
-
+        Me.Close()
 
     End Sub
 
