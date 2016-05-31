@@ -36,17 +36,23 @@ Public Class añadirSocioForm
         ElseIf TextBoxIban.Text.Length = 0 Then
             MsgBox("El campo IBAN es obligatorio")
         Else
-            Dim cmd = New SqlCommand
-            cmd.Connection = mbd.con
-            cmd.CommandText = "INSERT INTO SOCIO VALUES (@dni,@nom_soc,@email,@iban,@foto,@observacions)"
+
+            Try
+                Dim cmd = New SqlCommand
+                cmd.Connection = mbd.con
+                cmd.CommandText = "INSERT INTO SOCIO VALUES (@dni,@nom_soc,@email,@iban,@foto,@observacions)"
 
 
-            cmd.Parameters.AddWithValue("@dni", TextBoxDni.Text)
-            cmd.Parameters.AddWithValue("@nom_soc", TextBoxNombre.Text)
-            cmd.Parameters.AddWithValue("@email", TextBoxMail.Text)
-            cmd.Parameters.AddWithValue("@iban", TextBoxIban.Text)
-            cmd.Parameters.Add("@foto", SqlDbType.Image).Value = MS.GetBuffer()
-            cmd.Parameters.AddWithValue("@observacions", TextBoxObservaciones.Text)
+                cmd.Parameters.AddWithValue("@dni", TextBoxDni.Text)
+                cmd.Parameters.AddWithValue("@nom_soc", TextBoxNombre.Text)
+                cmd.Parameters.AddWithValue("@email", TextBoxMail.Text)
+                cmd.Parameters.AddWithValue("@iban", TextBoxIban.Text)
+                cmd.Parameters.Add("@foto", SqlDbType.Image).Value = MS.GetBuffer()
+                cmd.Parameters.AddWithValue("@observacions", TextBoxObservaciones.Text)
+
+            Catch ex As Exception
+                MsgBox("puto error")
+            End Try
 
             Try
                 mbd.con.Open()
