@@ -22,11 +22,11 @@ Public Class añadirSocioForm
         Try
             mbd.anadirSocio(TextBoxDni.Text, TextBoxNombre.Text, TextBoxMail.Text, TextBoxIban, PictureBox1.Image, TextBoxObservaciones)
 
-<<<<<<< HEAD
+
         Catch ex As Exception
             MsgBox("Error al añadir el socio a la base de datos")
         End Try
-=======
+
         If TextBoxDni.Text.Length = 0 Then
             MsgBox("El campo DNI es obligatorio")
         ElseIf TextBoxDni.Text.Length < 9 Then
@@ -65,24 +65,12 @@ Public Class añadirSocioForm
 
             End Try
 
-
-
-
-
         End If
-
-
-
-
-
->>>>>>> a284be15b30a5e4bbcf502d666f2394558e5db16
-
 
     End Sub
 
     Private Sub ButtonSeleccionar_Click(sender As Object, e As EventArgs) Handles ButtonSeleccionar.Click
         'Abrir el navegador para cargar la imagen
-
 
         Dim dialogo As New OpenFileDialog
         dialogo.InitialDirectory = "C:"
@@ -102,16 +90,7 @@ Public Class añadirSocioForm
             End Try
 
             MsgBox(MS.GetBuffer().Length)
-
-
-
-
         End If
-
-
-
-
-
 
     End Sub
 End Class

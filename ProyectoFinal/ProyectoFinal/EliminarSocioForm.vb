@@ -138,14 +138,14 @@ Public Class EliminarSocioForm
 
 
             ' consulta sql para eliminar de la bd
-            da.DeleteCommand = New SqlCommand("DELETE FROM SOCIO WHERE dni=@dni", con)
-            da.DeleteCommand.Parameters.Add("@dni", SqlDbType.Int).Value = dni
+            da.DeleteCommand = New SqlCommand("DELETE FROM SOCIO WHERE dni = @dni", con)
+            da.DeleteCommand.Parameters.Add("@dni", SqlDbType.VarChar).Value = dni
             ' update
             da.Update(ds, "SOCIO")
             MsgBox("ELIMINADO")
             contador = 0
             rellenarTextBox()
-
+            'Me.Close()
         End If
 
     End Sub
