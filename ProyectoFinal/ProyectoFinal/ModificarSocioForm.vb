@@ -93,6 +93,16 @@ Public Class ModificarSocioForm
     End Sub
 
     Private Sub ButtonGuardar_Click(sender As Object, e As EventArgs) Handles ButtonGuardar.Click
+        'Boton de guardar, insertamos la informacion en la base de datos.
+
+        Dim mbd As New ManejadorBD
+
+        mbd.modificarSocio(Me.TextBoxDNI.Text, Me.TextBoxNombre.Text, Me.TextBoxMail.Text, Me.TextBoxIban.Text, Me.TextBoxObservaciones.Text)
+
+        'consulta
+        da.Update(ds, "SOCIO")
+        contador = 0
+        rellenarTextBox()
 
     End Sub
 End Class

@@ -188,5 +188,33 @@ Public Class ManejadorBD
         con.Close()
 
     End Sub
+    Sub modificarSocio(ByRef v1, ByRef v2, ByRef v3, ByRef v4, ByRef v5)
+        Dim command As New SqlCommand("MODIFICARSOCIO", con)
+        command.CommandType = CommandType.StoredProcedure
+
+        command.Parameters.AddWithValue("@dni", v1)
+        command.Parameters.AddWithValue("@nom_soc", v2)
+        command.Parameters.AddWithValue("@email", v3)
+        command.Parameters.AddWithValue("@iban", v4)
+        command.Parameters.AddWithValue("@observacions", v5)
+
+        Try
+            con.Open()
+
+        Catch ex As SqlException
+            MsgBox("Imposible conectarse a la BD")
+        End Try
+        '  Try
+        command.ExecuteNonQuery()
+            Beep()
+            MsgBox("Socio modificado correctamente")
+
+        '    '     Catch ex As SqlException
+        '   MsgBox("No se puede hacer la modificacion del Socio")
+        '    End Try
+
+        con.Close()
+
+    End Sub
 End Class
 
