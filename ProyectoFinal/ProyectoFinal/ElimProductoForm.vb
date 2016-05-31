@@ -141,6 +141,9 @@ Public Class ElimProductoForm
             ' update
             da.Update(ds, "PRODUCTO")
             MsgBox("ELIMINADO")
+            contador=0
+            rellenarTextBox()
+
         End If
     End Sub
 End Class
