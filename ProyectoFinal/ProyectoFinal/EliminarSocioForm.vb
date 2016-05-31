@@ -119,22 +119,28 @@ Public Class EliminarSocioForm
 
     Private Sub ButtonEliminar_Click(sender As Object, e As EventArgs) Handles ButtonEliminar.Click
 
-        Dim dni = TextBoxDNI.Text
-        'Eliminamos la fila del dataset
-        ds.Tables("SOCIO").Rows(contador).Delete()
-        'Hay que eliminar la fila del dataAdapter!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-        'Limpiamos todos los textBox de la fila
-        limpiarTextBox()
+        If (MessageBox.Show("¿Estás seguro de que quieres eliminar este registro?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) =
+         DialogResult.No) Then
+            MsgBox("Operación cancelada")
 
 
-        ' consulta sql para eliminar de la bd
-        da.DeleteCommand = New SqlCommand("DELETE FROM SOCIO WHERE dni=@dni", con)
-        da.DeleteCommand.Parameters.Add("@dni", SqlDbType.Int).Value = dni
+            Dim dni = TextBoxDNI.Text
+            'Eliminamos la fila del dataset
+            ds.Tables("SOCIO").Rows(contador).Delete()
+            'Hay que eliminar la fila del dataAdapter!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-        ' update
-        da.Update(ds, "SOCIO")
-        MsgBox("ELIMINADO")
+            'Limpiamos todos los textBox de la fila
+            limpiarTextBox()
+
+
+            ' consulta sql para eliminar de la bd
+            da.DeleteCommand = New SqlCommand("DELETE FROM SOCIO WHERE dni=@dni", con)
+            da.DeleteCommand.Parameters.Add("@dni", SqlDbType.Int).Value = dni
+
+            ' update
+            da.Update(ds, "SOCIO")
+            MsgBox("ELIMINADO")
+        End If
 
     End Sub
 End Class

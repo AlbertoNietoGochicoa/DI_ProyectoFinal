@@ -13,9 +13,12 @@
         ' Referencia a la clase
         Dim mbd = New ManejadorBD
         ' Debug
+        Try
+            mbd.anadirSocio(TextBoxDni.Text, TextBoxNombre.Text, TextBoxMail.Text, TextBoxIban, PictureBox1.Image, TextBoxObservaciones)
 
-
-        ' mbd.anadirSocio(TextBoxDni.Text, TextBoxNombre.Text, TextBoxMail.Text, TextBoxIban, TextBoxImagen, TextBoxObservaciones)
+        Catch ex As Exception
+            MsgBox("Error al añadir el socio a la base de datos")
+        End Try
 
 
     End Sub

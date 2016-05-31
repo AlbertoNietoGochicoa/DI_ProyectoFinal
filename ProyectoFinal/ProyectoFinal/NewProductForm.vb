@@ -10,6 +10,12 @@
 
         Dim mbd As New ManejadorBD
 
+        Try
+            TextBoxPrecio.Text = CType(TextBoxPrecio.Text, Integer)
+        Catch ex As Exception
+            MsgBox("Campos mal rellenados, por favor revisa que no haya letras en precio, o stocks")
+        End Try
+
         mbd.anadirProducto(Me.TextBoxNombProd.Text, Me.TextBoxPrecio.Text, Me.TextBoxStock.Text, Me.TextBoxStockMin.Text, Me.TextBoxDescrip.Text)
 
         'limpiar los texbox

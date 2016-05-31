@@ -149,6 +149,8 @@ Public Class ManejadorBD
             Beep()
             MsgBox("Producto añadido correctamente")
 
+
+
         Catch ex As SqlException
             MsgBox("No se puede hacer la inserción del producto")
         End Try
