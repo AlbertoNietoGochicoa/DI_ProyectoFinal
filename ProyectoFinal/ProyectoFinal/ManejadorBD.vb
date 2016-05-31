@@ -6,7 +6,7 @@ Public Class ManejadorBD
 
     'Hacemos la conexion
 
-    Dim con As SqlConnection = New SqlConnection(My.Settings.conexion)
+    Public con As SqlConnection = New SqlConnection(My.Settings.conexion)
 
     ' Objetos
     Dim da As SqlDataAdapter
@@ -103,7 +103,11 @@ Public Class ManejadorBD
         command.Parameters.AddWithValue("@nom_soc", ventanaAnadiSocio.TextBoxNombre.Text)
         command.Parameters.AddWithValue("@email", ventanaAnadiSocio.TextBoxMail.Text)
         command.Parameters.AddWithValue("@iban", ventanaAnadiSocio.TextBoxIban.Text)
+<<<<<<< HEAD
         command.Parameters.AddWithValue("@foto", foto)
+=======
+        command.Parameters.AddWithValue("@foto", ventanaAnadiSocio.PictureBox1.Image)
+>>>>>>> a284be15b30a5e4bbcf502d666f2394558e5db16
         command.Parameters.AddWithValue("@observacions", ventanaAnadiSocio.TextBoxObservaciones.Text)
 
         Try
@@ -116,7 +120,7 @@ Public Class ManejadorBD
             command.ExecuteNonQuery()
 
         Catch ex As SqlException
-            MsgBox("No sue puede agregar al usuario")
+            MsgBox(ex.ToString)
         End Try
 
 
