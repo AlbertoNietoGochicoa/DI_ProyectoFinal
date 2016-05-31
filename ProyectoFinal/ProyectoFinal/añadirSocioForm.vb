@@ -65,7 +65,7 @@ Public Class añadirSocioForm
                 cmd.ExecuteNonQuery()
                 MsgBox("Nuevo socio guardado")
             Catch ex As SqlException
-                MsgBox(ex.ToString)
+                MsgBox("Not se puede guardar")
             Finally
                 mbd.con.Close()
 
