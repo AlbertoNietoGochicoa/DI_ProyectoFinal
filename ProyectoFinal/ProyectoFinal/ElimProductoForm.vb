@@ -128,7 +128,6 @@ Public Class ElimProductoForm
         Else
             'Eliminamos la fila del dataset
             ds.Tables("PRODUCTO").Rows(contador).Delete()
-            'Hay que eliminar la fila del dataAdapter!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
             'Limpiamos todos los textBox de la fila
             limpiarTextBox()

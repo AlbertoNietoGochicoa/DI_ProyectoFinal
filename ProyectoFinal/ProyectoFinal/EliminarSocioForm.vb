@@ -43,17 +43,22 @@ Public Class EliminarSocioForm
         TextBoxObservaciones.Clear()
     End Sub
     Sub rellenarTextBox()
-        Try
+        If ds.Tables("SOCIO").Rows.Count > 0 Then
+            Try
+                TextBoxDNI.Text = ds.Tables("SOCIO").Rows(contador).Item("dni").ToString()
+                TextBoxNombre.Text = ds.Tables("SOCIO").Rows(contador).Item("nom_soc").ToString()
+                TextBoxIban.Text = ds.Tables("SOCIO").Rows(contador).Item("iban").ToString()
+                TextBoxMail.Text = ds.Tables("SOCIO").Rows(contador).Item("email").ToString
+                TextBoxObservaciones.Text = ds.Tables("SOCIO").Rows(contador).Item("observacions").ToString
+            Catch ex As Exception
+                MsgBox("Error al rellenar el socio")
+            End Try
+        Else
+            MsgBox("No hay socios que mostrar")
+            Me.Close()
 
+        End If
 
-            TextBoxDNI.Text = ds.Tables("SOCIO").Rows(contador).Item("dni").ToString()
-            TextBoxNombre.Text = ds.Tables("SOCIO").Rows(contador).Item("nom_soc").ToString()
-            TextBoxIban.Text = ds.Tables("SOCIO").Rows(contador).Item("iban").ToString()
-            TextBoxMail.Text = ds.Tables("SOCIO").Rows(contador).Item("email").ToString
-            TextBoxObservaciones.Text = ds.Tables("SOCIO").Rows(contador).Item("observacions").ToString
-        Catch ex As Exception
-
-        End Try
     End Sub
 
     Private Sub ButtonVolver_Click(sender As Object, e As EventArgs) Handles ButtonVolver.Click
@@ -122,7 +127,7 @@ Public Class EliminarSocioForm
         If (MessageBox.Show("¿Estás seguro de que quieres eliminar este registro?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) =
          DialogResult.No) Then
             MsgBox("Operación cancelada")
-
+        Else
 
             Dim dni = TextBoxDNI.Text
             'Eliminamos la fila del dataset
@@ -136,7 +141,7 @@ Public Class EliminarSocioForm
             ' consulta sql para eliminar de la bd
             da.DeleteCommand = New SqlCommand("DELETE FROM SOCIO WHERE dni=@dni", con)
             da.DeleteCommand.Parameters.Add("@dni", SqlDbType.Int).Value = dni
-
+            MsgBox("pasa")
             ' update
             da.Update(ds, "SOCIO")
             MsgBox("ELIMINADO")
