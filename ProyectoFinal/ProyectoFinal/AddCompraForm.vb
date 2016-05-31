@@ -67,9 +67,4 @@ Public Class AddCompraForm
 
         End If
     End Sub
-
-
-    End Sub
-
-
 End Class
