@@ -37,13 +37,13 @@ Public Class ModProductForm
 
         'Rellenamos el combobox
         'Rellenamos el combobox
-        Dim total As Integer = (ds.Tables("PRODUCTO").Rows.Count - 1)
-        Dim cont = 0
-        For index As Integer = 0 To total
-
-            ComboBox1.Items.Add(ds.Tables("PRODUCTO").Rows(cont).Item("nom_prod").ToString)
-            cont += 1
-        Next
+        '    Dim total As Integer = (ds.Tables("PRODUCTO").Rows.Count - 1)
+        '   Dim cont = 0
+        '  For index As Integer = 0 To total
+        '
+        ' ComboBox1.Items.Add(ds.Tables("PRODUCTO").Rows(cont).Item("nom_prod").ToString)
+        'cont += 1
+        ' Next
 
 
 
@@ -70,14 +70,10 @@ Public Class ModProductForm
 
         mbd.modificarProducto(Me.TextBoxCodProd.Text, Me.TextBoxNombre.Text, Me.TextBoxPrecio.Text, Me.TextBoxStock.Text, Me.TextBoxStockMin.Text, Me.TextBoxDescripcion.Text)
 
-        'Establece la conexion con el origen de los datos
-        Dim sql As String = "SELECT cod_prod, nom_prod, precio, stock, stock_minimo FROM PRODUCTO"
 
         'consulta
-        cmd = New SqlCommand(sql, con)
-        da = New SqlDataAdapter(cmd)
-
-        da.Fill(ds, "PRODUCTO")
+        da.Update(ds, "PRODUCTO")
+        contador = 0
         rellenarTextBox()
 
 
@@ -139,8 +135,5 @@ Public Class ModProductForm
 
     End Sub
 
-    Private Sub ButtonBuscar_Click(sender As Object, e As EventArgs) Handles ButtonBuscar.Click
-        'Recuperar los datos 
 
-    End Sub
 End Class

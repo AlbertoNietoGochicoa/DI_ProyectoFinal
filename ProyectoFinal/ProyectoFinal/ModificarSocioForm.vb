@@ -91,4 +91,8 @@ Public Class ModificarSocioForm
         rellenarTextBox()
 
     End Sub
+
+    Private Sub ButtonGuardar_Click(sender As Object, e As EventArgs) Handles ButtonGuardar.Click
+
+    End Sub
 End Class

@@ -103,7 +103,7 @@ Public Class ManejadorBD
         command.Parameters.AddWithValue("@nom_soc", ventanaAnadiSocio.TextBoxNombre.Text)
         command.Parameters.AddWithValue("@email", ventanaAnadiSocio.TextBoxMail.Text)
         command.Parameters.AddWithValue("@iban", ventanaAnadiSocio.TextBoxIban.Text)
-        'command.Parameters.AddWithValue("@foto", )
+        command.Parameters.AddWithValue("@foto", foto)
         command.Parameters.AddWithValue("@observacions", ventanaAnadiSocio.TextBoxObservaciones.Text)
 
         Try

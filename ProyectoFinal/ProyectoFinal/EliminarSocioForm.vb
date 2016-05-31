@@ -132,7 +132,6 @@ Public Class EliminarSocioForm
             Dim dni = TextBoxDNI.Text
             'Eliminamos la fila del dataset
             ds.Tables("SOCIO").Rows(contador).Delete()
-            'Hay que eliminar la fila del dataAdapter!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
             'Limpiamos todos los textBox de la fila
             limpiarTextBox()
@@ -141,10 +140,12 @@ Public Class EliminarSocioForm
             ' consulta sql para eliminar de la bd
             da.DeleteCommand = New SqlCommand("DELETE FROM SOCIO WHERE dni=@dni", con)
             da.DeleteCommand.Parameters.Add("@dni", SqlDbType.Int).Value = dni
-            MsgBox("pasa")
             ' update
             da.Update(ds, "SOCIO")
             MsgBox("ELIMINADO")
+            contador = 0
+            rellenarTextBox()
+
         End If
 
     End Sub

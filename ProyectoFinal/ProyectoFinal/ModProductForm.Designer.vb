@@ -41,8 +41,6 @@ Partial Class ModProductForm
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ButtonBuscar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'TextBoxDescripcion
@@ -171,7 +169,7 @@ Partial Class ModProductForm
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(52, 12)
+        Me.Button3.Location = New System.Drawing.Point(62, 51)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(54, 45)
         Me.Button3.TabIndex = 40
@@ -180,7 +178,7 @@ Partial Class ModProductForm
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(148, 12)
+        Me.Button4.Location = New System.Drawing.Point(158, 51)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(54, 45)
         Me.Button4.TabIndex = 41
@@ -189,7 +187,7 @@ Partial Class ModProductForm
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(248, 12)
+        Me.Button5.Location = New System.Drawing.Point(258, 51)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(54, 45)
         Me.Button5.TabIndex = 42
@@ -198,37 +196,18 @@ Partial Class ModProductForm
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(350, 12)
+        Me.Button6.Location = New System.Drawing.Point(360, 51)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(54, 45)
         Me.Button6.TabIndex = 43
         Me.Button6.Text = ">>"
         Me.Button6.UseVisualStyleBackColor = True
         '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(52, 97)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(198, 21)
-        Me.ComboBox1.TabIndex = 44
-        '
-        'ButtonBuscar
-        '
-        Me.ButtonBuscar.Location = New System.Drawing.Point(299, 95)
-        Me.ButtonBuscar.Name = "ButtonBuscar"
-        Me.ButtonBuscar.Size = New System.Drawing.Size(75, 23)
-        Me.ButtonBuscar.TabIndex = 45
-        Me.ButtonBuscar.Text = "Buscar"
-        Me.ButtonBuscar.UseVisualStyleBackColor = True
-        '
         'ModProductForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(479, 543)
-        Me.Controls.Add(Me.ButtonBuscar)
-        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
@@ -274,6 +253,4 @@ Partial Class ModProductForm
     Friend WithEvents Button4 As Button
     Friend WithEvents Button5 As Button
     Friend WithEvents Button6 As Button
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents ButtonBuscar As Button
 End Class
