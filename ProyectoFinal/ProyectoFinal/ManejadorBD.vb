@@ -216,5 +216,35 @@ Public Class ManejadorBD
         con.Close()
 
     End Sub
+    Public Sub anadirPedido(ByRef v1, ByRef v3)
+
+        Dim command As New SqlCommand("ANADIRPEDIDO", con)
+        command.CommandType = CommandType.StoredProcedure
+
+        command.Parameters.AddWithValue("@dni", v1)
+        command.Parameters.AddWithValue("@fecha_pedido", Today.Date)
+        command.Parameters.AddWithValue("@importe", v3)
+
+
+        Try
+            con.Open()
+
+        Catch ex As SqlException
+            MsgBox("Imposible conectarse a la BD")
+        End Try
+        Try
+            command.ExecuteNonQuery()
+            Beep()
+            MsgBox("Pedido añadido")
+
+        Catch ex As SqlException
+            MsgBox(ex.ToString)
+        End Try
+
+        con.Close()
+
+    End Sub
+
+
 End Class
 
